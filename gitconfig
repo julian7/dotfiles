@@ -1,0 +1,27 @@
+[user]
+	name = Balazs Nagy
+	email = julsevern@gmail.com
+[alias]
+	st = status -sb
+	ci = commit
+	co = checkout
+	unadd = reset HEAD
+	br = branch
+	man = help
+	ff = flow feature
+[core]
+	excludesfile = ~/.gitignore
+[gui]
+	fontui = -family \"Lucida Grande\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family Menlo -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+[mergetool "diffmerge"]
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge -result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = false
+[merge]
+	tool = diffmerge
+[difftool "filemerge"]
+	cmd = /usr/bin/opendiff $LOCAL $REMOTE
+[mergetool "gvim"]
+	path = /usr/local/bin/mvim
+[mergetool "gvimdiff"]
+	path = /usr/local/bin/mvim
