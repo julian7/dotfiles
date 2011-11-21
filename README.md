@@ -50,6 +50,26 @@ Most parts of the config is separated into various .zsh files in ~/.zsh.d. Notab
 * st: status -sb (shorter status)
 * unadd: reset HEAD
 
+## Installation
+
+* Clone repo: `git clone https://github.com/julian7/dotfiles.git`
+* Change to `dotfiles` dir
+* Run `./INSTALL.sh`
+
+## Making changes
+
+These changes are good for me, but you might want to have other settings (you don't want to publish your changes into git using my email address, do you?). This is where git comes handy.
+
+* Clone the repo and install (see above)
+* Make your changes
+* Commit changes (creating a local branch is a bonus)
+
+## Upgrading
+
+* Fetch changes from GitHub
+* Merge changes with your changes (rebase works pretty well if you don't want to publish your repo anywhere)
+* Enjoy
+
 ## Requirements
 
 * zsh
