@@ -1,2 +1,2 @@
 pathadd $HOME/.rbenv/bin
-which rbenv && eval "$(rbenv init -)"
+which rbenv > /dev/null && eval "$(rbenv init -)"
