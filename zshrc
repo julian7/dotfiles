@@ -14,7 +14,8 @@ else
   alias vi=vim
 fi
 
-alias grep='grep --color=always'
 for i in $HOME/.zsh/*.zsh; do
   source $i
 done
+
+alias grep='grep -a --color=always'
