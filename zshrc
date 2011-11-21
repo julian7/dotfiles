@@ -7,3 +7,4 @@ for i in $HOME/.zsh.d/*.zsh; do
 done
 
 alias grep='grep -a --color=always'
+which ack-grep > /dev/null && alias ack=ack-grep
