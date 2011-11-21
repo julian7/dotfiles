@@ -2,7 +2,7 @@ function pathadd {
   [[ -d "$1" ]] && path=("$1" ${path:#$1})
 }
 
-for i in $HOME/.zsh/*.zsh; do
+for i in $HOME/.zsh.d/*.zsh; do
   source $i
 done
 
