@@ -5,3 +5,4 @@
 *.rbc
 vendor/rbx
 .sass-cache/
+*.swp
