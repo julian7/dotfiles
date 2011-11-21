@@ -9,4 +9,4 @@ done
 alias grep='grep -a --color=always'
 which ack-grep > /dev/null && alias ack=ack-grep
 
-test $HOME/.zshrc.local && source $HOME/.zshrc.local
+test -f $HOME/.zshrc.local && source $HOME/.zshrc.local
