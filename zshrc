@@ -2,7 +2,6 @@ function pathadd {
   [[ -d "$1" ]] && path=("$1" ${path:#$1})
 }
 
-source $HOME/.zsh/*.zsh
 
 pathadd /usr/local/bin
 pathadd $HOME/bin
@@ -17,3 +16,6 @@ fi
 
 alias t='tmux -u'
 alias grep='grep --color=always'
+for i in $HOME/.zsh/*.zsh; do
+  source $i
+done
