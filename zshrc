@@ -2,9 +2,6 @@ function pathadd {
   [[ -d "$1" ]] && path=("$1" ${path:#$1})
 }
 
-
-pathadd /usr/local/bin
-pathadd $HOME/bin
 which joe > /dev/null || alias joe=vim
 if which mvim > /dev/null
 then
