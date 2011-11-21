@@ -1,6 +1,5 @@
 function pathadd {
-  dir="$1"
-  test -d "$dir" && path=("$dir" ${path:#$dir})
+  [[ -d "$1" ]] && path=("$1" ${path:#$1})
 }
 
 source $HOME/.zsh/*.zsh
