@@ -9,6 +9,7 @@
 	br = branch
 	man = help
 	ff = flow feature
+	h = log --oneline --graph
 [core]
 	excludesfile = ~/.gitignore
 [gui]
