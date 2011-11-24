@@ -9,7 +9,7 @@
 	br = branch
 	man = help
 	ff = flow feature
-	h = log --oneline --graph
+	h = log --graph --pretty=\"format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset\"
 [core]
 	excludesfile = ~/.gitignore
 [gui]
