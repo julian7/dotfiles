@@ -87,6 +87,7 @@ Use [Homebrew](http://mxcl.github.com/homebrew/). This is the easiest way of man
 * gvim / macvim: powerful text file editor. brew install macvim / apt-get install vim-gnome.
 * [pow](http://pow.cx) (OSX only): zero-config rack app server.
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment: brew install rbenv / see README
+* [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir ~/.rbenv/plugins; cd ~/.rbenv/plugins; git clone https://github.com/sstephenson/rbenv-vars.git`
 * [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for rbenv: see README
 * [gitflow](https://github.com/nvie/gitflow): git workflow: brew install git-flow / see README
 * [janus](https://github.com/carlhuda/janus/tree/experimental) experimental branch: mvim/gvim plugin distribution. See README to install.
