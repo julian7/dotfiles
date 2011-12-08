@@ -27,3 +27,5 @@
 	path = /usr/local/bin/mvim
 [mergetool "gvimdiff"]
 	path = /usr/local/bin/mvim
+[mergetool]
+	keepBackup = false
