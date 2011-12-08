@@ -46,6 +46,7 @@ Most parts of the config is separated into various .zsh files in ~/.zsh.d. Notab
 * ci: commit
 * co: checkout
 * ff: flow feature (git flow's feature commands)
+* ffco: flow feature checkout (checking out a feature branch)
 * h: log --oneline --graph (read: history)
 * man: help
 * st: status -sb (shorter status)

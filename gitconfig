@@ -10,6 +10,7 @@
 	man = help
 	ff = flow feature
 	h = log --graph --pretty=\"format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset\"
+	ffco = flow feature checkout
 [core]
 	excludesfile = ~/.gitignore
 [gui]
