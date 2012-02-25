@@ -30,4 +30,3 @@ function __git_prompt_info() {
 
 export __update_git_vars=1
 setopt prompt_subst
-export PROMPT='%m:%~$(__git_prompt_info " [%s]")>>%# '
