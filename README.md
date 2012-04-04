@@ -10,7 +10,8 @@ Most parts of the config is separated into various .zsh files in ~/.zsh.d. Notab
 * editor: finds proper EDITOR var, creates some convenience aliases
 * git: git prompt
 * osx-proxy-icons: adds proxy icon support to OSX Terminal
-* paths: extra paths
+* paths: extra path
+* pow: pow commands
 * rbenv: rbenv bootstrap (if installed)
 * ruby: some ruby and ruby on rails aliases
 * settings: ZSH settings
@@ -23,7 +24,7 @@ Most parts of the config is separated into various .zsh files in ~/.zsh.d. Notab
 * git: global gitconfig and gitignore
 * tmux
 
-## ZSH aliases
+## ZSH aliases and functions
 
 * ack: ack-grep (if ack-grep is installed)
 * b: bundle (ruby)
@@ -34,6 +35,7 @@ Most parts of the config is separated into various .zsh files in ~/.zsh.d. Notab
 * joe: set to 'vim' on systems where joe is not installed
 * mate\_wait: non-forking textmate
 * mt: multitool (ClearCase)
+* powit: configures pow to pick up rack app in current dir
 * r: script/rails (ruby)
 * sct: sudo cleartool (ClearCase)
 * smt: sudo multitool (ClearCase)
@@ -42,12 +44,15 @@ Most parts of the config is separated into various .zsh files in ~/.zsh.d. Notab
 
 ## GIT aliases
 
+* aa: add --all
 * br: branch
 * ci: commit
 * co: checkout
+* dc: diff --cached
+* di: diff
 * ff: flow feature (git flow's feature commands)
 * ffco: flow feature checkout (checking out a feature branch)
-* h: log --oneline --graph (read: history)
+* h: pretty oneline history
 * man: help
 * st: status -sb (shorter status)
 * unadd: reset HEAD
