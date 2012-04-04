@@ -2,9 +2,12 @@
 	name = Balazs Nagy
 	email = julsevern@gmail.com
 [alias]
+	aa = add --all
 	st = status -sb
 	ci = commit
 	co = checkout
+	di = diff
+	dc = diff --cached
 	unadd = reset HEAD
 	br = branch
 	man = help
