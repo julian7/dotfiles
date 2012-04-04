@@ -25,6 +25,7 @@ powit() {
   if [ -h ${powdir}/$vhost ]; then
     echo A pow link already exists:
     readlink ${powdir}/${vhost}
+      echo Please try to browse http://${vhost}.dev/
     return 1
   fi
   if [ -e ${powdir}/$vhost ]; then
@@ -36,9 +37,10 @@ powit() {
     if [[ $(readlink ${powdir}/$hostlink) == ${basedir} ]]; then
       echo This app is already registered with pow with a different name:
       echo $hostlink
-      echo Please try to browse http://$hostlink.dev/
+      echo Please try to browse http://${hostlink}.dev/
       return 1
     fi
   done
-  echo ln -s ${basedir} ${powdir}/$vhost
+  ln -s ${basedir} ${powdir}/$vhost
+  echo You can browse http://${vhost}.dev/ now.
 }
