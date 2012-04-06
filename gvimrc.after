@@ -1,0 +1,5 @@
+set guifont=Inconsolata:h14
+set transparency=10
+set guioptions=aAce
+color molokai
+set background=light
