@@ -1,33 +1,43 @@
 #!/bin/sh
 
 handle_file() {
-  instfile="$HOME/.$file"
-  fullname="$PWD/$file"
+  file=${1}
+  prefix=${2:-}
+  dirname=${3:-}
+  instfile="$HOME/.${prefix}${file}"
+  fullname="$PWD/${dirname}${file}"
   if [ -e "$instfile" ]; then
     if test -L "$instfile" -a "x"`readlink "$instfile"` = "x$fullname"; then
       return
     fi
-    /bin/echo -n ".$file already exists. What now? Diff / Replace / Skip [drs]: "
+    /bin/echo -n "${instfile#$HOME/} already exists. What now? Diff / Replace / Skip [drs]: "
     read R
     case $R in
       d|D)
-        diff -sudw $HOME/.$file $file
-        handle_file "$file"
+        diff -sudw ${instfile} ${fullname}
+        handle_file ${file} ${prefix} ${dirname}
         return
         ;;
       r|R)
-        mv $HOME/.$file $HOME/.$file.dotfile-$$
+        mv ${instfile} ${instfile}.dotfile-$$
         ;;
       s|S)
         return
         ;;
     esac
   fi
-  ln -s $PWD/$file $HOME/.$file
+  test -e ${instfile} && ln -s ${fullname} ${instfile}
 }
 
 cd `dirname $0`
 
-for file in [a-z]*; do
-  handle_file $file
+for file in `ls -d [a-z]*`; do
+  handle_file ${file}
+done
+
+for dir in `ls -d DIR-[a-z]*`; do
+  prefix=${dir#DIR-}
+  for file in `ls ${dir}`; do
+    handle_file ${file} ${prefix}/ ${dir}/
+  done
 done
