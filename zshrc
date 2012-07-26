@@ -9,8 +9,13 @@ fpath=($HOME/.zsh.d $fpath)
 for srcfile ($HOME/.zsh.d/*.zsh) source $srcfile
 
 # Load and run compinit
-autoload -U compinit
-compinit -i
+zstyle ':completion:*' completer _complete _ignored
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
+zstyle ':completion:*' use-compctl false
+zstyle :compinstall filename "${HOME}/.zshrc"
+
+autoload -Uz compinit
+compinit
 
 # Default aliases
 alias grep='grep -a --color=always'
