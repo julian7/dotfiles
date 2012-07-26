@@ -50,6 +50,7 @@ Most parts of the config is separated into various .zsh files in ~/.zsh.d. Notab
 * co: checkout
 * dc: diff --cached
 * di: diff
+* fm: full merge (merge --no-ff)
 * ff: flow feature (git flow's feature commands)
 * ffco: flow feature checkout (checking out a feature branch)
 * h: pretty oneline history
