@@ -1,3 +1,43 @@
-color solarized
-set background=dark
+color Tomorrow-Night
 
+set wildignore+=/vendor/ruby/*,vendor/cache/*,.DS_Store
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+" Move around splits
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-Down> <c-w>j
+nnoremap <c-Up> <c-w>
+nnoremap <c-Left> <c-w>h
+nnoremap <c-Right> <c-w>l
+nnoremap <CR> :nohlsearch<cr>
+
+" Go to commands
+map <leader>gg :topleft 100 :split Gemfile<cr>
+map <leader>gr :topleft :split config/routes.rb<cr>
+map <leader>gv :CtrlP app/views<cr>
+map <leader>gc :CtrlP app/controllers<cr>
+map <leader>gm :CtrlP app/models<cr>
+map <leader>ga :CtrlP app/assets<cr>
+map <leader>gf :CtrlP features<cr>
+
+map <leader>gC :Gcommit -s<cr>
+
+" Other CtrlP settings
+let g:ctrlp_custom_ignore = { 'dir': 'vendor/ruby$' }
+" Prevent Vim from clobbering the scrollback buffer. See
+" http://www.shallowsky.com/linux/noaltscreen.html
+set t_ti= t_te=
+" keep more context when scrolling off the end of a buffer
+set scrolloff=3
+" highlight current line
+set cursorline
+set cmdheight=2
+" show tabs (== show titlebar on top)
+set showtabline=2
+set laststatus=2
+set switchbuf=useopen
+
+"Paste toggle
+set pastetoggle=<F2>
