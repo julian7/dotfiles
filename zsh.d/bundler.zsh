@@ -5,8 +5,8 @@
 
 within-bundled-project()
 {
-    local dir="$(pwd)"
-    while [ "$(dirname $dir)" != "/" ]; do
+    local dir=${PWD}
+    while [ ${dir} != "/" ]; do
         if [ -f "$dir/Gemfile" ]; then
             echo "$dir"
             return 0
@@ -27,8 +27,9 @@ run-with-bundler()
 call-with-bundler()
 {
     local cmd=$1
-    local binstub=`within-bundled-project`"/bin/$cmd"
-    if [ "$?" = "0" ]; then
+    local binstub=$(within-bundled-project)
+    if [ -n "${binstub}" ]; then
+        binstub="${binstub}/bin/${cmd}"
         if [ -x ${binstub} ]; then
             echo ${binstub}
         else
