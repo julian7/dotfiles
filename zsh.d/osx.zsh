@@ -11,4 +11,6 @@ if test $(uname) = "Darwin"; then
   autoload add-zsh-hook
   add-zsh-hook chpwd update_terminal_cwd
   update_terminal_cwd
+
+  alias ldd='otool -L'
 fi
