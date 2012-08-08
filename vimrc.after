@@ -16,13 +16,9 @@ nnoremap <CR> :nohlsearch<cr>
 " Go to commands
 map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>gr :topleft :split config/routes.rb<cr>
-map <leader>gv :CtrlP app/views<cr>
-map <leader>gc :CtrlP app/controllers<cr>
-map <leader>gm :CtrlP app/models<cr>
-map <leader>ga :CtrlP app/assets<cr>
+map <leader>ga :CtrlP app<cr>
 map <leader>gf :CtrlP features<cr>
-
-map <leader>gC :Gcommit -s<cr>
+map <leader>gc :Gcommit -s<cr>
 
 " Other CtrlP settings
 let g:ctrlp_custom_ignore = { 'dir': 'vendor/ruby$' }
@@ -34,6 +30,7 @@ set scrolloff=3
 " highlight current line
 set cursorline
 set cmdheight=2
+set winwidth=80
 " show tabs (== show titlebar on top)
 set showtabline=2
 set laststatus=2
@@ -41,3 +38,6 @@ set switchbuf=useopen
 
 "Paste toggle
 set pastetoggle=<F2>
+
+"Settings by file type
+autocmd FileType yaml set smartindent
