@@ -1,5 +1,5 @@
-PAGER=less
-LESS="-R -m"
+export PAGER=less
+export LESS="-R -m"
 HISTFILE=$HOME/.zshist
 HISTSIZE=1000
 SAVEHIST=2000
