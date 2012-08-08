@@ -5,3 +5,5 @@ bindkey "\e[6~" end-of-history
 bindkey "\e[3~" delete-char
 bindkey "\e\e[C" forward-word
 bindkey "\e\e[D" backward-word
+bindkey "\e[1;9C" forward-word
+bindkey "\e[1;9D" backward-word
