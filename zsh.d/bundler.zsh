@@ -51,7 +51,9 @@ guard
 haml
 heroku
 html2haml
+mina
 pry
+puma
 rackup
 rails
 rake
