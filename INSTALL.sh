@@ -26,7 +26,7 @@ handle_file() {
         ;;
     esac
   fi
-  test -e ${instfile} && ln -s ${fullname} ${instfile}
+  test -e ${instfile} || ln -s ${fullname} ${instfile}
 }
 
 cd `dirname $0`
@@ -37,6 +37,7 @@ done
 
 for dir in `ls -d DIR-[a-z]*`; do
   prefix=${dir#DIR-}
+  mkdir -p "${HOME}/.${prefix}"
   for file in `ls ${dir}`; do
     handle_file ${file} ${prefix}/ ${dir}/
   done
