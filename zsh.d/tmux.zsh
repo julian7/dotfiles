@@ -6,7 +6,7 @@ function _set_tmux_title() {
 }
 
 function ssh() {
-  _set_tmux_title $1
+  _set_tmux_title ${1%%.*}
   command ssh "$@"
   _set_tmux_title
 }
