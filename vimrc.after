@@ -1,3 +1,8 @@
+if has("win32")
+  set backupdir=~/vimfiles/_backup    " where to put backup files.
+  set directory=~/vimfiles/_temp      " where to put swap files.
+endif
+
 color Tomorrow-Night
 
 set wildignore+=/vendor/ruby/*,vendor/cache/*,.DS_Store
