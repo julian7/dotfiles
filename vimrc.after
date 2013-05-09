@@ -23,7 +23,7 @@ map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>gr :topleft :split config/routes.rb<cr>
 map <leader>ga :CtrlP app<cr>
 map <leader>gf :CtrlP features<cr>
-map <leader>gc :Gcommit -s<cr>
+map <leader>gc :Gcommit<cr>
 
 " Other CtrlP settings
 let g:ctrlp_custom_ignore = { 'dir': 'vendor/ruby$' }
