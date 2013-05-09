@@ -11,10 +11,9 @@
 	unadd = reset HEAD
 	br = branch
 	man = help
-	ff = flow feature
 	h = "!$SHELL -c 'source ~/.githelpers && pretty_git_log'"
-	ffco = flow feature checkout
 	fm = merge --no-ff
+	fb = new-fb
 [core]
 	excludesfile = ~/.gitignore
 [gui]
