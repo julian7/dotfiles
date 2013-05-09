@@ -25,6 +25,17 @@ map <leader>ga :CtrlP app<cr>
 map <leader>gf :CtrlP features<cr>
 map <leader>gc :Gcommit<cr>
 
+" Tab commands
+imap <c-Tab> <ESC>:tabnext<cr>
+imap <c-s-Tab> <ESC>:tabprevious<cr>
+imap <D-M-Right> <ESC>:tabnext<cr>
+imap <D-M-Left> <ESC>:tabprevious<cr>
+map <c-Tab> :tabnext<cr>
+map <c-s-Tab> :tabprevious<cr>
+map <D-M-Right> :tabnext<cr>
+map <D-M-Left> :tabprevious<cr>
+map <leader>tn :tabnew<cr>
+
 " Other CtrlP settings
 let g:ctrlp_custom_ignore = { 'dir': 'vendor/ruby$' }
 " Prevent Vim from clobbering the scrollback buffer. See
