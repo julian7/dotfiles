@@ -18,7 +18,7 @@ autoload -Uz compinit
 compinit
 
 # Default aliases
-alias grep='grep -a --color=always'
+[[ $(uname) = *BSD ]] || alias grep='grep -a --color=always'
 which ack-grep > /dev/null && alias ack=ack-grep
 
 # Load local customizations
