@@ -45,7 +45,7 @@ set t_ti= t_te=
 set scrolloff=3
 " highlight current line
 set cursorline
-set cmdheight=2
+set cmdheight=1
 set winwidth=80
 " show tabs (== show titlebar on top)
 set showtabline=2
