@@ -14,7 +14,7 @@
 # break this.
 
 HASH="%C(yellow)%h%Creset"
-RELATIVE_TIME="%Cgreen(%ar)%Creset"
+RELATIVE_TIME="%Cgreen(%ai)%Creset"
 AUTHOR="%C(bold blue)<%an>%Creset"
 REFS="%C(red)%d%Creset"
 SUBJECT="%s"
@@ -27,10 +27,11 @@ show_git_head() {
 }
 
 pretty_git_log() {
-    git log --graph --abbrev-commit --date=relative --pretty="tformat:${FORMAT}" $* |
+    git log --graph --abbrev-commit --pretty="tformat:${FORMAT}" $* |
         # Repalce (2 years ago) with (2 years)
         # Replace (2 years, 5 months) with (2 years)
-        sed -Ee 's/(^[^<]*) ago\)/\1)/' -e 's/(^[^<]*), [[:digit:]]+ .*months?\)/\1)/' |
+        # sed -Ee 's/(^[^<]*) ago\)/\1)/' -e 's/(^[^<]*), [[:digit:]]+ .*months?\)/\1)/' |
+        sed -Ee 's/ ([0-9]{2}:[0-9]{2}):[0-9]{2} \+[0-9]{4}/ \1/' |
         # Line columns up based on } delimiter
         column -s '}' -t |
         # Page only if we need to

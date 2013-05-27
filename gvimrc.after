@@ -3,7 +3,7 @@ if has("win32")
   set lines=200
   set columns=300
 elseif has("mac")
-  set guifont=Menlo:h12
+  set guifont=Source\ Code\ Pro:h13
   set transparency=5
   set guioptions=aAce
 elseif has("unix")

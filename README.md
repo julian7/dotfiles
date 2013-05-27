@@ -50,9 +50,8 @@ Most parts of the config is separated into various .zsh files in ~/.zsh.d. Notab
 * co: checkout
 * dc: diff --cached
 * di: diff
+* fb: new-fb (reqires git-process gem)
 * fm: full merge (merge --no-ff)
-* ff: flow feature (git flow's feature commands)
-* ffco: flow feature checkout (checking out a feature branch)
 * h: pretty oneline history
 * man: help
 * st: status -sb (shorter status)
@@ -96,7 +95,7 @@ Use [Homebrew](http://mxcl.github.com/homebrew/). This is the easiest way of man
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment: brew install rbenv / see README
 * [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir ~/.rbenv/plugins; cd ~/.rbenv/plugins; git clone https://github.com/sstephenson/rbenv-vars.git`
 * [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for rbenv: see README
-* [gitflow](https://github.com/nvie/gitflow): git workflow: brew install git-flow / see README
+* [git-process](https://github.com/jdigger/git-process): gem install git-process
 * [janus](https://github.com/carlhuda/janus) mvim/gvim plugin distribution. See README to install.
 
 ## Copyright

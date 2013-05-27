@@ -1,5 +1,6 @@
 --type-add=ruby=.slim,.haml,.rake,.rsel
 --type-add=css=.sass,.scss
+--type-set=puppet=.pp
 --type-set=javascript=.coffee
 --type-set=nib=.xib
 --type-set=plist=.plist
