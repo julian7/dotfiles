@@ -58,7 +58,6 @@ rake
 rake2thor
 rump
 rspec
-ruby
 sass
 sass-convert
 serve
