@@ -20,8 +20,7 @@ run-with-bundler()
 {
     local cmd=$1
     shift
-    cmd=`call-with-bundler $cmd`
-    $cmd "$@"
+    `call-with-bundler $cmd` "$@"
 }
 
 call-with-bundler()
@@ -49,7 +48,6 @@ cucumber
 foreman
 guard
 haml
-heroku
 html2haml
 mina
 pry
@@ -58,8 +56,8 @@ rackup
 rails
 rake
 rake2thor
+rump
 rspec
-ruby
 sass
 sass-convert
 serve

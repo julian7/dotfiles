@@ -23,7 +23,18 @@ map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>gr :topleft :split config/routes.rb<cr>
 map <leader>ga :CtrlP app<cr>
 map <leader>gf :CtrlP features<cr>
-map <leader>gc :Gcommit -s<cr>
+map <leader>gc :Gcommit<cr>
+
+" Tab commands
+imap <c-Tab> <ESC>:tabnext<cr>
+imap <c-s-Tab> <ESC>:tabprevious<cr>
+imap <D-M-Right> <ESC>:tabnext<cr>
+imap <D-M-Left> <ESC>:tabprevious<cr>
+map <c-Tab> :tabnext<cr>
+map <c-s-Tab> :tabprevious<cr>
+map <D-M-Right> :tabnext<cr>
+map <D-M-Left> :tabprevious<cr>
+map <leader>tn :tabnew<cr>
 
 " Other CtrlP settings
 let g:ctrlp_custom_ignore = { 'dir': 'vendor/ruby$' }
@@ -34,7 +45,7 @@ set t_ti= t_te=
 set scrolloff=3
 " highlight current line
 set cursorline
-set cmdheight=2
+set cmdheight=1
 set winwidth=80
 " show tabs (== show titlebar on top)
 set showtabline=2
@@ -46,3 +57,7 @@ set pastetoggle=<F2>
 
 "Settings by file type
 autocmd FileType yaml set smartindent
+
+"iTerm cursor shape
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"

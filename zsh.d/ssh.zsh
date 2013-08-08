@@ -6,6 +6,7 @@ function _save_ssh_agent() {
 
 function _set_ssh_agent() {
   source $SSHTOKEN
+  export SSH_AUTH_SOCK
 }
 
 function getagent() {
