@@ -10,7 +10,7 @@ handle_file() {
     if test -L "$instfile" -a "x"`readlink "$instfile"` = "x$fullname"; then
       return
     fi
-    /bin/echo -n "${instfile#$HOME/} already exists. What now? Diff / Replace / Skip [drs]: "
+    echo -n "${instfile#$HOME/} already exists. What now? Diff / Replace / Skip [drs]: "
     read R
     case $R in
       d|D)
