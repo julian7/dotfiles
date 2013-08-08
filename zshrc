@@ -1,5 +1,11 @@
-function pathadd {
-  [[ -d "$1" ]] && path=("$1" ${path:#$1})
+function addpath {
+  orig=$1
+  new=$2
+  if [[ -d "$new" && ":$orig:" != *":$new:"* ]]; then
+    echo "$new:$orig"
+  else
+    echo "$orig"
+  fi
 }
 
 # Add function path

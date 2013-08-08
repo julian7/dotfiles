@@ -1,5 +1,6 @@
-pathadd /opt/rational/clearcase/etc/utils
-pathadd /opt/rational/clearcase/bin
+PATH=`addpath "$PATH" /opt/rational/clearcase/etc/utils`
+PATH=`addpath "$PATH" /opt/rational/clearcase/bin`
+export PATH
 
 alias ct=cleartool
 alias mt=multitool

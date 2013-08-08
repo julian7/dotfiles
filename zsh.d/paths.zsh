@@ -1,4 +1,5 @@
-pathadd /usr/local/share/npm/bin
-pathadd /usr/local/sbin
-pathadd /usr/local/bin
-pathadd $HOME/bin
+PATH=`addpath "$PATH" /usr/local/share/npm/bin`
+PATH=`addpath "$PATH" /usr/local/sbin`
+PATH=`addpath "$PATH" /usr/local/bin`
+PATH=`addpath "$PATH" $HOME/bin`
+export PATH
