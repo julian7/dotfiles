@@ -12,6 +12,7 @@ Most parts of the config is separated into various .zsh files in ~/.zsh.d. Notab
 * osx-proxy-icons: adds proxy icon support to OSX Terminal
 * paths: extra path
 * pow: pow commands
+* chruby: chruby bootstrap (if installed)
 * rbenv: rbenv bootstrap (if installed)
 * ruby: some ruby and ruby on rails aliases
 * settings: ZSH settings
@@ -92,6 +93,7 @@ Use [Homebrew](http://mxcl.github.com/homebrew/). This is the easiest way of man
 * tmux: terminal multiplexer. You will love it, especially if you use PuTTY or any non-tabbed terminal clients.
 * gvim / macvim: powerful text file editor. brew install macvim / apt-get install vim-gnome.
 * [pow](http://pow.cx) (OSX only): zero-config rack app server.
+* [chruby](https://github.com/postmodern/chruby): ruby selector environment
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment: brew install rbenv / see README
 * [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir ~/.rbenv/plugins; cd ~/.rbenv/plugins; git clone https://github.com/sstephenson/rbenv-vars.git`
 * [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for rbenv: see README
