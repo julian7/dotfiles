@@ -50,6 +50,7 @@ set winwidth=80
 " show tabs (== show titlebar on top)
 set showtabline=2
 set laststatus=2
+set noshowmode
 set switchbuf=useopen
 
 "Paste toggle
