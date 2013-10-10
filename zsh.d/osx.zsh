@@ -7,6 +7,7 @@ if test $(uname) = "Darwin"; then
     local REPLACE='%20'
     local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
     printf '\e]7;%s\a' "$PWD_URL"
+    printf '\e]0;%s\a' ${PWD/#$HOME/\~}
   }
   autoload add-zsh-hook
   add-zsh-hook chpwd update_terminal_cwd
