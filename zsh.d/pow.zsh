@@ -24,8 +24,8 @@ powit() {
   fi
   if [ -h ${powdir}/$vhost ]; then
     echo A pow link already exists:
-    readlink ${powdir}/${vhost}
-      echo Please try to browse http://${vhost}.dev/
+    ls -l ${powdir}/${vhost}
+    echo Please try to browse http://${vhost}.dev/
     return 1
   fi
   if [ -e ${powdir}/$vhost ]; then
