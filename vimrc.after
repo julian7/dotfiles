@@ -16,7 +16,15 @@ nnoremap <c-Down> <c-w>j
 nnoremap <c-Up> <c-w>
 nnoremap <c-Left> <c-w>h
 nnoremap <c-Right> <c-w>l
+
+" Misc
+"" return clears search highlighting
 nnoremap <CR> :nohlsearch<cr>
+"" ctrl-s saves
+map  <C-S> :w<cr>
+imap <C-S> <ESC>:w<cr>
+"" ,rw rewraps paragraph
+map <leader>rw vapgq
 
 " Go to commands
 map <leader>gg :topleft 100 :split Gemfile<cr>
