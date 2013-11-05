@@ -5,7 +5,7 @@ endif
 
 color Tomorrow-Night
 
-set wildignore+=/vendor/ruby/*,vendor/cache/*,.DS_Store
+set wildignore+=/vendor/rbx/*,/vendor/ruby/*,vendor/cache/*,.DS_Store
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 " Move around splits
 nnoremap <c-j> <c-w>j
