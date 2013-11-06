@@ -98,7 +98,7 @@ Use [Homebrew](http://mxcl.github.com/homebrew/). This is the easiest way of man
 * [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir ~/.rbenv/plugins; cd ~/.rbenv/plugins; git clone https://github.com/sstephenson/rbenv-vars.git`
 * [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for rbenv: see README
 * [git-process](https://github.com/jdigger/git-process): gem install git-process
-* [janus](https://github.com/carlhuda/janus) mvim/gvim plugin distribution. See README to install.
+* [vundle](https://github.com/gmarik/vundle): VIM plugin manager. Clone repo to ~/.vim/bundle/vundle
 
 ## Copyright
 
