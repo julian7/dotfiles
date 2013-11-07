@@ -8,14 +8,14 @@ filetype off                  " required!
 
 source ~/.vimrc.bundles
 
-let mapleader = ","
-set clipboard=unnamed
-set mouse=a
-set ttymouse=xterm2
+filetype plugin indent on " Enable filetype-specific indenting and plugins
 
 if has("win32")
   set backupdir=~/vimfiles/_backup    " where to put backup files.
   set directory=~/vimfiles/_temp      " where to put swap files.
+else
+  set backupdir^=~/.vim/_backup/      " where to put backup files.
+  set directory^=~/.vim/_temp/        " where to put swap files.
 endif
 
 color Tomorrow-Night
@@ -30,8 +30,6 @@ imap <D-s> <ESC>:w<CR>
 map <C-o> :w<CR>
 imap <C-o> <ESC>:w<CR>
 
-set wildignore+=/vendor/rbx/*,/vendor/ruby/*,vendor/cache/*,.DS_Store
-set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 " Move around splits
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -60,7 +58,23 @@ map <c-s-Tab> :tabprevious<cr>
 map <D-M-Right> :tabnext<cr>
 map <D-M-Left> :tabprevious<cr>
 map <leader>tn :tabnew<cr>
+"" return clears search highlighting
+nnoremap <CR> :nohlsearch<cr>
+"" ,rw rewraps paragraph
+map <leader>rw vapgq
 
+" Settings
+
+let mapleader = ","
+set clipboard=unnamed
+set mouse=a
+set ttymouse=xterm2
+set nocompatible
+set backspace=indent,eol,start
+set showcmd
+set noesckeys
+set history=500
+set encoding=utf-8
 " Other CtrlP settings
 let g:ctrlp_custom_ignore = { 'dir': 'vendor/ruby$' }
 " Prevent Vim from clobbering the scrollback buffer. See
@@ -68,7 +82,13 @@ let g:ctrlp_custom_ignore = { 'dir': 'vendor/ruby$' }
 set t_ti= t_te=
 " keep more context when scrolling off the end of a buffer
 set scrolloff=3
+"set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+
+"Searching
 set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 " highlight current line
 set cursorline
 set cmdheight=1
@@ -78,17 +98,56 @@ set showtabline=2
 set laststatus=2
 set noshowmode
 set switchbuf=useopen
-"" return clears search highlighting
-nnoremap <CR> :nohlsearch<cr>
-"" ,rw rewraps paragraph
-map <leader>rw vapgq
 
 "Paste toggle
 set pastetoggle=<F2>
 
-"Settings by file type
-autocmd FileType yaml set smartindent
+"Whitespace
+set nowrap
+set tabstop=2
+set shiftwidth=4
+set expandtab
+set list
+set listchars=""
+set listchars=tab:\	\
+set listchars+=trail:·
+set listchars+=extends:>
+set listchars+=precedes:<
 
+"Disable wildcard matches
+"" ... output and VCS files
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+"" ... vendored ruby / rubinius / caches and OSX files
+set wildignore+=/vendor/rbx/*,/vendor/ruby/*,vendor/cache/*,.DS_Store
+"" ... archive files
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+"" ... bundler and sass cache
+set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
+
+" Disable temp and backup files
+set wildignore+=*.swp,*~,._*
 "iTerm cursor shape
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+"Settings by file type
+if has("autocmd")
+  autocmd!
+  autocmd BufRead,BufNewFile *.txt setlocal wrap lbr nolist
+  autocmd FileType yaml set smartindent
+  autocmd FileType make setlocal noexpandtab
+
+  " Make sure all mardown files have the correct filetype set and setup wrapping
+  autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown
+  autocmd FileType markdown call s:setupWrapping()
+
+  " Treat JSON files like JavaScript
+  au BufNewFile,BufRead *.json set ft=javascript
+
+  " Treat ruby dsl files as ruby source
+  "autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,Guardfile,config.ru,*.rake} set ft=ruby
+
+  " make Python follow PEP8 for whitespace ( http://www.python.org/dev/peps/pep-0008/ )
+  autocmd FileType python setlocal softtabstop=4 tabstop=4 shiftwidth=4
+  autocmd FileType ruby,eruby,yaml setlocal ai sw=2 sts=2 et
+endif
