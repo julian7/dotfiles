@@ -37,7 +37,7 @@ Bundle 'jnwhiteh/vim-golang'
 
 " Tools
 Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-sensible'
+"Bundle 'tpope/vim-sensible'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'edsono/vim-matchit'
 Bundle 'ervandew/supertab'

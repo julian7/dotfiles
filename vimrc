@@ -1,5 +1,8 @@
+" Leader key
+let mapleader = ","
+
 "Allow Powerline fonts
-let g:airline_theme='badwolf'
+let g:airline_theme='tomorrow'
 let g:airline_linecolumn_prefix = '¶ '
 let g:airline_powerline_fonts = 1
 
@@ -9,6 +12,7 @@ filetype off                  " required!
 source ~/.vimrc.bundles
 
 filetype plugin indent on " Enable filetype-specific indenting and plugins
+syntax on
 
 if has("win32")
   set backupdir=~/vimfiles/_backup    " where to put backup files.
@@ -40,13 +44,30 @@ nnoremap <c-Up> <c-w>
 nnoremap <c-Left> <c-w>h
 nnoremap <c-Right> <c-w>l
 
-" Go to commands
+" Ruby/rails files
 map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>gr :topleft :split config/routes.rb<cr>
+
+" Fugitive
+map <leader>gb :Gblame<cr>
+map <leader>gc :Gcommit<cr>
+map <leader>gd :Gdiff<cr>
+map <leader>gl :Glog<cr>
+map <leader>gp :Git push<cr>
+map <leader>gs :Gstatus<cr>
+
+" NERDTree
+map <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
+
+" CtrlP
+map <D-t> :CtrlP<CR>
+imap <D-t> <Esc>:CtrlP<CR>
 map <leader>ga :CtrlP app<cr>
 map <leader>gf :CtrlP features<cr>
-map <leader>gc :Gcommit<cr>
-map <leader>gs :Gstatus<cr>
+
+" Gundo
+nmap <F5> :GundoToggle<CR>
+imap <F5> <Esc>:GundoToggle<CR>
 
 " Tab commands
 imap <c-Tab> <ESC>:tabnext<cr>
@@ -65,16 +86,18 @@ map <leader>rw vapgq
 
 " Settings
 
-let mapleader = ","
 set clipboard=unnamed
 set mouse=a
 set ttymouse=xterm2
-set nocompatible
 set backspace=indent,eol,start
 set showcmd
+" noesckeys should come before nocompatible, or arrow keys in insert mode
+" won't work
 set noesckeys
+set nocompatible
 set history=500
 set encoding=utf-8
+
 " Other CtrlP settings
 let g:ctrlp_custom_ignore = { 'dir': 'vendor/ruby$' }
 " Prevent Vim from clobbering the scrollback buffer. See
@@ -132,7 +155,6 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 "Settings by file type
 if has("autocmd")
-  autocmd!
   autocmd BufRead,BufNewFile *.txt setlocal wrap lbr nolist
   autocmd FileType yaml set smartindent
   autocmd FileType make setlocal noexpandtab
