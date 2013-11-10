@@ -131,8 +131,7 @@ set tabstop=2
 set shiftwidth=4
 set expandtab
 set list
-set listchars=""
-set listchars=tab:\	\
+set listchars=tab:→·
 set listchars+=trail:·
 set listchars+=extends:>
 set listchars+=precedes:<
