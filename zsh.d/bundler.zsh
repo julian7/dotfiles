@@ -53,7 +53,6 @@ mina
 pry
 puma
 rackup
-rails
 rake
 rake2thor
 rump
