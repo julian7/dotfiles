@@ -99,6 +99,8 @@ Use [Homebrew](http://mxcl.github.com/homebrew/). This is the easiest way of man
 * [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for rbenv: see README
 * [git-process](https://github.com/jdigger/git-process): gem install git-process
 * [vundle](https://github.com/gmarik/vundle): VIM plugin manager. Clone repo to ~/.vim/bundle/vundle
+* [ruby-install](https://github.com/postmodern/ruby-install): ruby builder for
+  chruby: see README
 
 ## Copyright
 
