@@ -3,8 +3,9 @@ let mapleader = ","
 
 "Allow Powerline fonts
 let g:airline_theme='tomorrow'
-let g:airline_linecolumn_prefix = '¶ '
+let g:airline_linecolumn_prefix = '¶'
 let g:airline_powerline_fonts = 1
+let g:airline_detect_paste = 1
 
 set nocompatible              " be iMproved
 filetype off                  " required!
@@ -59,6 +60,11 @@ map <leader>gs :Gstatus<cr>
 " NERDTree
 map <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 
+" NERDCommenter
+map <D-/> <plug>NERDCommenterToggle<CR>
+imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
+map <leader>/ <plug>NERDCommenterToggle<CR>
+
 " CtrlP
 map <D-t> :CtrlP<CR>
 imap <D-t> <Esc>:CtrlP<CR>
@@ -98,8 +104,13 @@ set nocompatible
 set history=500
 set encoding=utf-8
 
-" Other CtrlP settings
-let g:ctrlp_custom_ignore = { 'dir': 'vendor/ruby$' }
+" NERDTree
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', '\~$']
+" CtrlP
+let g:ctrlp_custom_ignore = {
+  \ 'dir': 'vendor/ruby$|\.git$\|\.hg$\|\.svn$',
+  \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
+  \ }
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
@@ -145,8 +156,7 @@ set wildignore+=/vendor/rbx/*,/vendor/ruby/*,vendor/cache/*,.DS_Store
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 "" ... bundler and sass cache
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
-
-" Disable temp and backup files
+" ... temp and backup files
 set wildignore+=*.swp,*~,._*
 "iTerm cursor shape
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
