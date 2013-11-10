@@ -1,10 +1,13 @@
 # Julian7's dotfiles
 
-This is my more or less educated guess on how to use a unix system. My shell of choice is ZSH, therefore you won't find any other configurations (maybe bash later, as a fallback).
+This is my more or less educated guess on how to use a unix system. My shell of
+choice is ZSH, therefore you won't find any other configurations (maybe bash
+later, as a fallback).
 
 ## ZSH config
 
-Most parts of the config is separated into various .zsh files in ~/.zsh.d. Notable settings:
+Most parts of the config is separated into various .zsh files in ~/.zsh.d.
+Notable settings:
 
 * ClearCase: aliases and paths
 * editor: finds proper EDITOR var, creates some convenience aliases
@@ -66,7 +69,9 @@ Most parts of the config is separated into various .zsh files in ~/.zsh.d. Notab
 
 ## Making changes
 
-These changes are good for me, but you might want to have other settings (you don't want to publish your changes into git using my email address, do you?). This is where git comes handy.
+These changes are good for me, but you might want to have other settings (you
+don't want to publish your changes into git using my email address, do you?).
+This is where git comes handy.
 
 * Clone the repo and install (see above)
 * Make your changes
@@ -75,7 +80,8 @@ These changes are good for me, but you might want to have other settings (you do
 ## Upgrading
 
 * Fetch changes from GitHub
-* Merge changes with your changes (rebase works pretty well if you don't want to publish your repo anywhere)
+* Merge changes with your changes (rebase works pretty well if you don't want
+  to publish your repo anywhere)
 * Enjoy
 
 ## Requirements
@@ -85,24 +91,34 @@ These changes are good for me, but you might want to have other settings (you do
 
 ### OSX-specific
 
-Use [Homebrew](http://mxcl.github.com/homebrew/). This is the easiest way of managing packages.
+Use [Homebrew](http://mxcl.github.com/homebrew/). This is the easiest way of
+managing packages.
 
 ## Extensions in mind
 
-* ack: power search. Install: brew install ack (on OSX), apt-get install ack-grep (on Debian / Ubuntu)
-* tmux: terminal multiplexer. You will love it, especially if you use PuTTY or any non-tabbed terminal clients.
-* gvim / macvim: powerful text file editor. brew install macvim / apt-get install vim-gnome.
+* ack: power search. Install: brew install ack (on OSX), apt-get install
+  ack-grep (on Debian / Ubuntu)
+* tmux: terminal multiplexer. You will love it, especially if you use PuTTY or
+  any non-tabbed terminal clients.
+* gvim / macvim: powerful text file editor. brew install macvim / apt-get
+  install vim-gnome.
 * [pow](http://pow.cx) (OSX only): zero-config rack app server.
 * [chruby](https://github.com/postmodern/chruby): ruby selector environment
-* [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment: brew install rbenv / see README
-* [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir ~/.rbenv/plugins; cd ~/.rbenv/plugins; git clone https://github.com/sstephenson/rbenv-vars.git`
-* [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for rbenv: see README
-* [git-process](https://github.com/jdigger/git-process): gem install git-process
-* [vundle](https://github.com/gmarik/vundle): VIM plugin manager. Clone repo to ~/.vim/bundle/vundle
+* [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment:
+  brew install rbenv / see README
+* [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir
+  ~/.rbenv/plugins; cd ~/.rbenv/plugins; git clone
+  https://github.com/sstephenson/rbenv-vars.git`
 * [ruby-install](https://github.com/postmodern/ruby-install): ruby builder for
   chruby: see README
+* [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for
+  rbenv: see README
+* [git-process](https://github.com/jdigger/git-process): gem install
+  git-process
+* [vundle](https://github.com/gmarik/vundle): VIM plugin manager. Clone repo to
+  `~/.vim/bundle/vundle`
 
 ## Copyright
 
-[![Creative Commons Licence](http://i.creativecommons.org/l/by/3.0/88x31.png)](http://creativecommons.org/licenses/by/3.0/)  
+[![Creative Commons Licence](http://i.creativecommons.org/l/by/3.0/88x31.png)](http://creativecommons.org/licenses/by/3.0/)
 This work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
