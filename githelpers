@@ -37,3 +37,5 @@ pretty_git_log() {
         # Page only if we need to
         less -FXRS
 }
+
+"$@"

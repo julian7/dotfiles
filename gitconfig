@@ -11,7 +11,7 @@
 	unadd = reset HEAD
 	br = branch
 	man = help
-	h = "!$SHELL -c 'source ~/.githelpers && pretty_git_log'"
+	h = "!~/.githelpers pretty_git_log"
 	fm = merge --no-ff
 	fb = new-fb
 	amend = commit --amend --no-edit
