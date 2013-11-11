@@ -142,10 +142,7 @@ set tabstop=2
 set shiftwidth=4
 set expandtab
 set list
-set listchars=tab:→·
-set listchars+=trail:·
-set listchars+=extends:>
-set listchars+=precedes:<
+set listchars=tab:▶\ ,eol:¬,trail:·,extends:>,precedes:<
 
 "Disable wildcard matches
 "" ... output and VCS files
