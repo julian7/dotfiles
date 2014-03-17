@@ -37,3 +37,35 @@ pretty_git_log() {
         # Page only if we need to
         less -FXRS
 }
+
+# git freeze and thaw
+# written by James Macaulay
+# https://gist.github.com/jamesmacaulay/582757
+freeze() {
+    local count=0
+    if git commit -m "WIP [STAGED]" > /dev/null; then
+        let count+=1
+    fi
+    git add --all .
+    if git commit -m "WIP [UNSTAGED]" > /dev/null; then
+        let count+=1
+    fi
+    if [ $count -eq 0 ]; then
+        echo "nothing committed"
+    else
+        git log -n$count --pretty=format:'%Cgreen%h %Cred%an%Creset: %s'
+    fi
+}
+
+thaw() {
+    if git rev-list HEAD -n1 --pretty="format:%n" | tail -n1 | grep "^WIP \[UNSTAGED\]$" > /dev/null; then
+        git reset HEAD^ > /dev/null
+    fi
+    if git rev-list HEAD -n1 --pretty="format:%n" | tail -n1 | grep "^WIP \[STAGED\]$" > /dev/null; then
+        git reset --soft HEAD^ > /dev/null
+    fi
+    git status --short
+}
+
+"$@"
+

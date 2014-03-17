@@ -35,7 +35,7 @@ for file in `ls -d [a-z]*`; do
   handle_file ${file}
 done
 
-for dir in `ls -d DIR-[a-z]*`; do
+for dir in `ls -d DIR-[a-z]* 2>/dev/null`; do
   prefix=${dir#DIR-}
   mkdir -p "${HOME}/.${prefix}"
   for file in `ls ${dir}`; do
