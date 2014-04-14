@@ -42,3 +42,5 @@ for dir in `ls -d DIR-[a-z]* 2>/dev/null`; do
     handle_file ${file} ${prefix}/ ${dir}/
   done
 done
+
+touch $HOME/.gitconfig

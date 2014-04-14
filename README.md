@@ -66,6 +66,8 @@ Notable settings:
 * Clone repo: `git clone https://github.com/julian7/dotfiles.git`
 * Change to `dotfiles` dir
 * Run `./INSTALL.sh`
+* Update your .gitconfig file to contain the changes you might need from
+  `~/.config/git/config`.
 
 ## Making changes
 
