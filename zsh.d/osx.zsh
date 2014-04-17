@@ -14,4 +14,10 @@ if test $(uname) = "Darwin"; then
   update_terminal_cwd
 
   alias ldd='otool -L'
+
+  # use reattach with tmux if there is one
+  if which reattach-to-user-namespace >/dev/null; then
+    export REATTACH_CMD="reattach-to-user-namespace"
+    export REATTACH_SHELL="$REATTACH_CMD -l zsh"
+  fi
 fi
