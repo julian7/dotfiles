@@ -20,4 +20,86 @@ if test $(uname) = "Darwin"; then
     export REATTACH_CMD="reattach-to-user-namespace"
     export REATTACH_SHELL="$REATTACH_CMD -l zsh"
   fi
+
+  scutil_query() {
+    local key=$1
+    scutil <<-EOT
+      open
+      get $key
+      d.show
+      close
+EOT
+  }
+  scutil_value_query() {
+    local key=$1
+    local val=$2
+    scutil_query "$1" | grep "$2" | awk '{print $3}'
+  }
+
+  function __getproxyaddress() {
+    local key val
+    local server="" port="80" url=""
+    while IFS=' ' read key val; do
+      case $key in
+        "Enabled:")
+          [ ${val} = "No" ] && return
+          ;;
+        "Server:")
+          server=${val} ;;
+        "Port:")
+          port=${val} ;;
+        "URL:")
+          url=${val} ;;
+      esac
+    done
+    if [[ -n "$url" ]]; then
+      echo $url
+    else
+      echo "http://$server:$port"
+    fi
+  }
+
+  function __setproxyaddress() {
+    local variable=$1
+    local setting=$2
+    if [ -n "$setting" ]; then
+      export $variable=$setting
+      return 0
+    else
+      unset $variable
+      return 1
+    fi
+  }
+
+  SERVICE_GUID=$(scutil_value_query State:/Network/Global/IPv4 PrimaryService)
+  NETWORKSERVICE=$(scutil_value_query Setup:/Network/Service/$SERVICE_GUID UserDefinedName)
+
+  function fixproxy() {
+    local NS=${NETWORKSETUP:-/usr/sbin/networksetup}
+    local i var setting addr
+    local -i success=0
+    for i in web:http secureweb:https ftp:ftp; do
+      setting=${i%:*}
+      var=${i#*:}
+      __setproxyaddress ${var}_proxy $($NS -get${setting}proxy ${NETWORKSERVICE} | __getproxyaddress) &&
+        success+=1
+    done
+    setting=`$NS -getproxybypassdomains ${NETWORKSERVICE} | tr '\n' , | sed 's/,$//'`
+    __setproxyaddress NO_PROXY ${setting}
+
+    if ((success==0)); then
+      setting=$($NS -getautoproxyurl ${NETWORKSERVICE} | __getproxyaddress)
+      if [[ -n ${setting} ]]; then
+        var=$(curl -s $setting |
+          grep PROXY |
+          tr -d \; |
+          cut -d'"' -f2 |
+          cut -d' ' -f2 |
+          head -1)
+        for i in http https ftp; do
+          __setproxyaddress ${i}_proxy $var
+        done
+      fi
+    fi
+  }
 fi
