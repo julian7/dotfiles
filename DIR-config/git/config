@@ -2,6 +2,7 @@
 	name = Balazs Nagy
 	email = julsevern@gmail.com
 [alias]
+	a = add
 	aa = add --all
 	st = status -sb
 	ci = commit
