@@ -184,4 +184,5 @@ if has("autocmd")
   " make Python follow PEP8 for whitespace ( http://www.python.org/dev/peps/pep-0008/ )
   autocmd FileType python setlocal softtabstop=4 tabstop=4 shiftwidth=4
   autocmd FileType ruby,eruby,yaml setlocal ai sw=2 sts=2 et
+  autocmd FileType bindzone set noet sw=8 ts=8
 endif
