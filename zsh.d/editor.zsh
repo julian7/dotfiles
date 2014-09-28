@@ -1,5 +1,5 @@
 which joe > /dev/null || alias joe=vim
-for editor in "subl -w" "mate -w" joe mvim gvim vim vi; do
+for editor in "subl -w" "mate -w" mvim vim joe vi; do
   if which ${editor% *} > /dev/null; then
     export EDITOR=${editor}
     break
