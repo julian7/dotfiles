@@ -185,4 +185,5 @@ if has("autocmd")
   autocmd FileType python setlocal softtabstop=4 tabstop=4 shiftwidth=4
   autocmd FileType ruby,eruby,yaml setlocal ai sw=2 sts=2 et
   autocmd FileType bindzone set noet sw=8 ts=8
+  autocmd FileType puppet set ai sw=2 sts=2 et
 endif
