@@ -187,6 +187,7 @@ if has("autocmd")
   "autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,Guardfile,config.ru,*.rake} set ft=ruby
 
   " make Python follow PEP8 for whitespace ( http://www.python.org/dev/peps/pep-0008/ )
+  autocmd FileType go set noet sw=4 ts=4
   autocmd FileType python setlocal softtabstop=4 tabstop=4 shiftwidth=4
   autocmd FileType ruby,eruby,yaml setlocal ai sw=2 sts=2 et
   autocmd FileType bindzone set noet sw=8 ts=8
