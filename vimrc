@@ -2,10 +2,14 @@
 let mapleader = ","
 
 "Allow Powerline fonts
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
 let g:airline_theme='tomorrow'
-let g:airline_linecolumn_prefix = '¶'
+let g:airline_symbols.linenr = '¶'
 let g:airline_powerline_fonts = 1
 let g:airline_detect_paste = 1
+let g:airline#extensions#tabline#enabled = 1
 
 set nocompatible              " be iMproved
 filetype off                  " required!
@@ -144,8 +148,7 @@ set tabstop=2
 set shiftwidth=4
 set expandtab
 set list
-set listchars=tab:▶\ ,eol:¬,trail:·,extends:>,precedes:<
-
+set listchars=tab:»\ ,eol:¬,trail:·,extends:>,precedes:<
 "Disable wildcard matches
 "" ... output and VCS files
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
