@@ -27,7 +27,9 @@ color Tomorrow-Night
 
 " Relative line numbering with spice
 set number
-set relativenumber
+if version >= 730
+    set relativenumber
+endif
 
 " Save as we know it -- on Dvorak
 map <D-s> :w<CR>
