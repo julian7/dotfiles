@@ -33,7 +33,7 @@ EOT
   scutil_value_query() {
     local key=$1
     local val=$2
-    scutil_query "$1" | grep "$2" | awk '{print $3}'
+    scutil_query "$1" | grep "$2" | sed 's/^.* : //'
   }
 
   function __getproxyaddress() {
@@ -71,10 +71,15 @@ EOT
     fi
   }
 
-  SERVICE_GUID=$(scutil_value_query State:/Network/Global/IPv4 PrimaryService)
-  NETWORKSERVICE=$(scutil_value_query Setup:/Network/Service/$SERVICE_GUID UserDefinedName)
+  function networkservice() {
+    SERVICE_GUID=$(scutil_value_query State:/Network/Global/IPv4 PrimaryService)
+    NETWORKSERVICE=$(scutil_value_query Setup:/Network/Service/$SERVICE_GUID UserDefinedName)
+    export NETWORKSERVICE
+  }
 
   function fixproxy() {
+    local SERVICE_GUID=$(scutil_value_query State:/Network/Global/IPv4 PrimaryService)
+    local NETWORKSERVICE="$(scutil_value_query Setup:/Network/Service/$SERVICE_GUID UserDefinedName)"
     local NS=${NETWORKSETUP:-/usr/sbin/networksetup}
     local i var setting addr
     local -i success=0
@@ -97,9 +102,11 @@ EOT
           cut -d' ' -f2 |
           head -1)
         for i in http https ftp; do
-          __setproxyaddress ${i}_proxy $var
+          __setproxyaddress ${i}_proxy http://$var
         done
       fi
     fi
   }
+
+  networkservice > /dev/null
 fi
