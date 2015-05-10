@@ -33,7 +33,7 @@ Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-markdown'
 Bundle 'chrisbra/csv.vim'
-Bundle 'jnwhiteh/vim-golang'
+Bundle 'fatih/vim-go'
 
 " Tools
 Bundle 'tpope/vim-unimpaired'
