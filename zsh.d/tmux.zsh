@@ -4,7 +4,7 @@ alias tvh="tmux split-window -p75 '$REATTACH_CMD vim .'"
 function _set_tmux_title() {
   local title=${1:-${HOST#*.}}
   [[ ${TERM#screen} != $TERM ]] && printf "\ek%s\e\\" $title
-  printf "\e]0;%s\a" $title
+  [[ ${TERM#xterm}  != $TERM ]] && printf "\e]0;%s\a" $title
 }
 
 _set_tmux_title
