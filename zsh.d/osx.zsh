@@ -14,6 +14,7 @@ if test $(uname) = "Darwin"; then
   update_terminal_cwd
 
   alias ldd='otool -L'
+  alias proute='netstat -nrf inet | grep -v H'
 
   # use reattach with tmux if there is one
   if which reattach-to-user-namespace >/dev/null; then
