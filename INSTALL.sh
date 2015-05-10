@@ -1,5 +1,7 @@
 #!/bin/sh
 
+LANG=C
+
 handle_file() {
   file=${1}
   prefix=${2:-}
