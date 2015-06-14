@@ -186,7 +186,7 @@ if has("autocmd")
   autocmd FileType markdown call s:setupWrapping()
 
   " Treat JSON files like JavaScript
-  au BufNewFile,BufRead *.json set ft=javascript
+  autocmd BufNewFile,BufRead *.json set ft=javascript
 
   " Treat ruby dsl files as ruby source
   "autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,Guardfile,config.ru,*.rake} set ft=ruby
