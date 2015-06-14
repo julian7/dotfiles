@@ -16,7 +16,9 @@ set nocompatible              " be iMproved
 source ~/.vimrc.bundles
 
 filetype plugin indent on " Enable filetype-specific indenting and plugins
-syntax on
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  syntax on
+endif
 
 if has("win32")
   set backupdir=~/vimfiles/_backup    " where to put backup files.
