@@ -173,6 +173,10 @@ endfunction
 
 "Settings by file type
 if has("autocmd")
+  autocmd BufReadPost *
+    \ if line("'\"") >= 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
   autocmd BufRead,BufNewFile *.txt setlocal wrap lbr nolist
   autocmd FileType yaml set smartindent
   autocmd FileType make setlocal noexpandtab
