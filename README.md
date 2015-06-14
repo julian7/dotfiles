@@ -43,6 +43,7 @@ Notable settings:
 * r: script/rails (ruby)
 * sct: sudo cleartool (ClearCase)
 * smt: sudo multitool (ClearCase)
+* serve: simple ruby-based static webserver
 * t: tmux -u (tmux)
 * vi: set to vim or mvim (if installed)
 
