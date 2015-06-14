@@ -117,8 +117,7 @@ managing packages.
   rbenv: see README
 * [git-process](https://github.com/jdigger/git-process): gem install
   git-process
-* [vundle](https://github.com/gmarik/vundle): VIM plugin manager. Clone repo to
-  `~/.vim/bundle/vundle`
+* [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager. Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install.
 
 ## Copyright
 

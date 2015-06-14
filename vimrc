@@ -12,7 +12,6 @@ let g:airline_detect_paste = 1
 let g:airline#extensions#tabline#enabled = 1
 
 set nocompatible              " be iMproved
-filetype off                  " required!
 
 source ~/.vimrc.bundles
 
