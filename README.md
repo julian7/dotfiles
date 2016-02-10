@@ -34,6 +34,8 @@ Notable settings:
 * ack: ack-grep (if ack-grep is installed)
 * b: bundle (ruby)
 * be: bundle exec (ruby)
+* ce: chef exec (chefdk)
+* cbe: chef exec bundle exec (chefdk)
 * ct: cleartool (ClearCase)
 * grep: grep -a --color=always (general)
 * gvim: set to mvim (if installed)
