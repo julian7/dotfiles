@@ -1,7 +1,7 @@
 : ${HOSTNAME:=$(hostname)}
 : ${SSHTOKEN:=$HOME/.ssh/token-$HOSTNAME}
 function _save_ssh_agent() {
-  set | grep -a SSH_AUTH_SOCK > $SSHTOKEN
+  set | command grep -a SSH_AUTH_SOCK > $SSHTOKEN
 }
 
 function _set_ssh_agent() {
