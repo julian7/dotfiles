@@ -21,6 +21,7 @@ Notable settings:
 * settings: ZSH settings
 * ssh: SSH agent save / restore (it comes handy with long running tmux sessions)
 * tmux: aliases and ssh title replacer function
+* dvm: dvm bootstrap (if installed)
 
 ## Other dotfiles
 
@@ -119,6 +120,7 @@ managing packages.
 * [git-process](https://github.com/jdigger/git-process): gem install
   git-process
 * [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager. Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install.
+* [dvm](https://getcarina.com/blog/docker-version-manager/): Docker Version Manager. Run `curl -sL https://download.getcarina.com/dvm/latest/install.sh | sh` to install.
 
 ## Copyright
 
