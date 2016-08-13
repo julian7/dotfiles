@@ -19,7 +19,7 @@ function __update_git_vars() {
 }
 
 function __set_current_git_branch() {
-  export __CURRENT_GIT_BRANCH="$(git branch --no-color 2>/dev/null | sed -n 's/^\* \(.*\)/\1/p')"
+  export __CURRENT_GIT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 }
 
 function __git_prompt_info() {
