@@ -65,6 +65,7 @@ Notable settings:
 * man: help
 * st: status -sb (shorter status)
 * unadd: reset HEAD
+* upstream: shows current branch's default remote
 
 ## Installation
 

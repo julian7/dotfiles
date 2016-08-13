@@ -17,6 +17,7 @@
 	fb = new-fb
 	thaw = "!~/.githelpers thaw"
 	freeze = "!~/.githelpers freeze"
+	upstream = "!f() { br=$(git rev-parse --abbrev-ref HEAD); merge=$(git config branch.${br}.merge); echo $(git config branch.${br}.remote)/${merge##refs/heads/}; }; f"
 	amend = commit --amend --no-edit
 [core]
 	excludesfile = ~/.gitignore
