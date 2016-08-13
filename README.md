@@ -37,6 +37,7 @@ Notable settings:
 * ce: chef exec (chefdk)
 * cbe: chef exec bundle exec (chefdk)
 * ct: cleartool (ClearCase)
+* dps: nicer docker ps
 * grep: grep -a --color=always (general)
 * gvim: set to mvim (if installed)
 * joe: set to 'vim' on systems where joe is not installed
