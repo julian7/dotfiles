@@ -19,7 +19,7 @@ function __update_git_vars() {
 }
 
 function __set_current_git_branch() {
-  export __CURRENT_GIT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+  export __CURRENT_GIT_BRANCH="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
 }
 
 function __git_prompt_info() {
