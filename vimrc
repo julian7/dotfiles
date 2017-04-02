@@ -115,7 +115,7 @@ set encoding=utf-8
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', '\~$']
 " CtrlP
 let g:ctrlp_custom_ignore = {
-  \ 'dir': 'vendor/ruby$|\.git$\|\.hg$\|\.svn$',
+  \ 'dir': 'vendor/ruby$\|node_modules$\|bower_components$\|tmp$\|dist$\|\.git$\|\.hg$\|\.svn$',
   \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
   \ }
 " Prevent Vim from clobbering the scrollback buffer. See
@@ -159,6 +159,8 @@ set wildignore+=/vendor/rbx/*,/vendor/ruby/*,vendor/cache/*,.DS_Store
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 "" ... bundler and sass cache
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
+"" ... node and bower packages
+set wildignore+=/node_modules/*,/bower_components/*
 " ... temp and backup files
 set wildignore+=*.swp,*~,._*
 "iTerm cursor shape
@@ -197,4 +199,5 @@ if has("autocmd")
   autocmd FileType ruby,eruby,yaml setlocal ai sw=2 sts=2 et
   autocmd FileType bindzone set noet sw=8 ts=8
   autocmd FileType puppet set ai sw=2 sts=2 et
+  autocmd FileType javascript set ai sw=2 sts=2 et
 endif
