@@ -7,3 +7,4 @@ vendor/rbx
 .sass-cache/
 *.swp
 *.sublime-workspace
+.idea/
