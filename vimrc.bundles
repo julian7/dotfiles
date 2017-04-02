@@ -27,6 +27,7 @@ Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-markdown'
 Plug 'chrisbra/csv.vim'
 Plug 'fatih/vim-go'
+Plug 'rust-lang/rust.vim'
 
 " Tools
 Plug 'tpope/vim-unimpaired'
