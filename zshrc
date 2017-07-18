@@ -10,9 +10,13 @@ zstyle :compinstall filename "${HOME}/.zshrc"
 autoload -Uz compinit
 compinit
 
+whichX() {
+    whence -c "$@" > /dev/null 2>&1
+}
+
 # Default aliases
 [[ $(uname) = *BSD ]] || alias grep='grep -a --color=always'
-which ack-grep > /dev/null && alias ack=ack-grep
+whichX ack-grep && alias ack=ack-grep
 
 # Load configuration source files
 for srcfile ($HOME/.zsh.d/*.zsh) source $srcfile

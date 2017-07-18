@@ -17,7 +17,7 @@ if test $(uname) = "Darwin"; then
   alias proute='netstat -nrf inet | grep -v H'
 
   # use reattach with tmux if there is one
-  if which reattach-to-user-namespace >/dev/null; then
+  if whichX reattach-to-user-namespace; then
     export REATTACH_CMD="reattach-to-user-namespace"
     export REATTACH_SHELL="$REATTACH_CMD -l zsh"
   fi
