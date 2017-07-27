@@ -13,6 +13,7 @@ addpath() {
 
 PATH=`echo $PATH |
   addpath /usr/local/share/npm/bin |
+  addpath /usr/local/opt/node@6/bin |
   addpath /usr/local/sbin |
   addpath /usr/local/bin |
   addpath $HOME/bin`

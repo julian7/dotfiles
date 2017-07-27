@@ -115,12 +115,14 @@ managing packages.
 
 * ack: power search. Install: brew install ack (on OSX), apt-get install
   ack-grep (on Debian / Ubuntu)
-* tmux: terminal multiplexer. You will love it, especially if you use PuTTY or
-  any non-tabbed terminal clients.
+* [chruby](https://github.com/postmodern/chruby): ruby selector environment
+* [dvm](https://getcarina.com/blog/docker-version-manager/): Docker Version Manager.
+  Run `curl -sL https://download.getcarina.com/dvm/latest/install.sh | sh` to install.
+* [git-process](https://github.com/jdigger/git-process): gem install
+  git-process
 * gvim / macvim: powerful text file editor. brew install macvim / apt-get
   install vim-gnome.
 * [pow](http://pow.cx) (OSX only): zero-config rack app server.
-* [chruby](https://github.com/postmodern/chruby): ruby selector environment
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment:
   brew install rbenv / see README
 * [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir
@@ -130,10 +132,13 @@ managing packages.
   chruby: see README
 * [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for
   rbenv: see README
-* [git-process](https://github.com/jdigger/git-process): gem install
-  git-process
-* [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager. Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install.
-* [dvm](https://getcarina.com/blog/docker-version-manager/): Docker Version Manager. Run `curl -sL https://download.getcarina.com/dvm/latest/install.sh | sh` to install.
+* tmux: terminal multiplexer. You will love it, especially if you use PuTTY or
+  any non-tabbed terminal clients.
+* [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager.
+  Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install.
+* [yarn](https://yarnpkg.com/): Alternative to Node Package Manager,
+  especially for client-base javascript frameworks. Install with `sudo
+  npm -g install yarn`.
 
 ## Copyright
 
