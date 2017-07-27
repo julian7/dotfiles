@@ -9,6 +9,7 @@ Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
 Plug 'vim-scripts/molokai'
 
 " Languages
+Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-git'
 Plug 'ajf/puppet-vim'
 Plug 'pangloss/vim-javascript'
