@@ -25,6 +25,8 @@ function __set_current_git_branch() {
 function __git_prompt_info() {
   if [ -n "$__CURRENT_GIT_BRANCH" ]; then
     printf "$1" "$__CURRENT_GIT_BRANCH"
+  else
+    printf "$2"
   fi
 }
 
