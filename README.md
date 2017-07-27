@@ -86,6 +86,14 @@ This is where git comes handy.
 * Make your changes
 * Commit changes (creating a local branch is a bonus)
 
+Local changes can go to
+
+* `~/.zshrc.local`
+* `~/.zshenv.local`
+* `~/.zlogin.local`
+
+which are loaded at the end of the respective original scripts.
+
 ## Upgrading
 
 * Fetch changes from GitHub

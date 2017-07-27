@@ -5,4 +5,4 @@ export HISTSIZE=1000
 export SAVEHIST=2000
 export PROMPT='%n@%m [%F{blue}%~%f]$(__git_prompt_info " %%F{green}‹%s›%%f") %# '
 export WORDCHARS=${WORDCHARS/\//}
-test -f $HOME/.zshenv.local && source $HOME/.zshenv.local
+test -f $HOME/.zlogin.local && source $HOME/.zlogin.local
