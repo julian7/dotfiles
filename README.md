@@ -20,6 +20,7 @@ Notable settings:
 * ruby: some ruby and ruby on rails aliases
 * settings: ZSH settings
 * ssh: SSH agent save / restore (it comes handy with long running tmux sessions)
+* powerline-go: Powerline-like prompt (if installed)
 * tmux: aliases and ssh title replacer function
 * dvm: dvm bootstrap (if installed)
 
@@ -125,6 +126,8 @@ managing packages.
 * [pow](http://pow.cx) (OSX only): zero-config rack app server.
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment:
   brew install rbenv / see README
+* [powerline-go](https://github.com/justjanne/powerline-go): `go get -u
+  github.com/justjanne/powerline-go`
 * [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir
   ~/.rbenv/plugins; cd ~/.rbenv/plugins; git clone
   https://github.com/sstephenson/rbenv-vars.git`
