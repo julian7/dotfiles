@@ -117,6 +117,8 @@ managing packages.
 * ack: power search. Install: brew install ack (on OSX), apt-get install
   ack-grep (on Debian / Ubuntu)
 * [chruby](https://github.com/postmodern/chruby): ruby selector environment
+* [direnv](https://github.com/direnv/direnv): Environment switcher for
+  shell. Install with `go get -u github.com/direnv/direnv`.
 * [dvm](https://getcarina.com/blog/docker-version-manager/): Docker Version Manager.
   Run `curl -sL https://download.getcarina.com/dvm/latest/install.sh | sh` to install.
 * [git-process](https://github.com/jdigger/git-process): gem install
