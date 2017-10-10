@@ -19,7 +19,7 @@ Notable settings:
 * rbenv: rbenv bootstrap (if installed)
 * ruby: some ruby and ruby on rails aliases
 * settings: ZSH settings
-* ssh: SSH agent save / restore (it comes handy with long running tmux sessions)
+* ssh: GnuPG agent support
 * powerline-go: Powerline-like prompt (if installed)
 * tmux: aliases and ssh title replacer function
 * dvm: dvm bootstrap (if installed)
@@ -123,9 +123,14 @@ managing packages.
   Run `curl -sL https://download.getcarina.com/dvm/latest/install.sh | sh` to install.
 * [git-process](https://github.com/jdigger/git-process): gem install
   git-process
+* [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation.
+  Currently requires a MacOS-only pinentry program. Install: brew install gnupg
 * gvim / macvim: powerful text file editor. brew install macvim / apt-get
   install vim-gnome.
-* [pow](http://pow.cx) (OSX only): zero-config rack app server.
+* [pinentry-mac](https://github.com/GPGTools/pinentry-mac): GUI-based
+  pinentry app for MacOS. Currently this is the pinentry application for
+  GnuPG. Install: brew install pinentry-mac
+* [pow](http://pow.cx) (MacOS only): zero-config rack app server.
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment:
   brew install rbenv / see README
 * [powerline-go](https://github.com/justjanne/powerline-go): `go get -u
