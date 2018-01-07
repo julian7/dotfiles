@@ -1,5 +1,5 @@
 function _powerline_precmd() {
-    PROMPT="$(powerline-go -error $? -shell zsh -colorize-hostname)"
+    PROMPT="$(powerline-go -error $? -shell zsh -colorize-hostname -modules venv,user,host,ssh,cwd,perms,git,hg,jobs,exit,root,docker)"
 }
 
 function _install_powerline_precmd() {
