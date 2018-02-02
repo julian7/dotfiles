@@ -11,6 +11,8 @@ let g:airline_powerline_fonts = 1
 let g:airline_detect_paste = 1
 " let g:airline#extensions#tabline#enabled = 1
 
+let g:go_fmt_command = "goimports"
+
 set nocompatible              " be iMproved
 
 source ~/.vimrc.bundles
