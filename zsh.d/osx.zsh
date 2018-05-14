@@ -108,6 +108,4 @@ EOT
       fi
     fi
   }
-
-  networkservice > /dev/null
 fi
