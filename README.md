@@ -64,6 +64,7 @@ Notable settings:
 * fb: new-fb (reqires git-process gem)
 * fm: full merge (merge --no-ff)
 * h: pretty oneline history
+* largest: shows largest *n* (default: 10) files in git repository
 * man: help
 * st: status -sb (shorter status)
 * unadd: reset HEAD

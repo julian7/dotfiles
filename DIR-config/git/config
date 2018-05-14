@@ -13,6 +13,7 @@
 	br = branch
 	man = help
 	h = "!f() { git log --graph --abbrev-commit --color=always --pretty=format:\"%C(yellow)%h%Creset}%Cgreen(%ai)%Creset}%C(bold blue)<%an>%Creset}%C(red)%d%Creset}%s\" \"$@\" | sed -Ee \"s/ ([0-9]{2}:[0-9]{2}):[0-9]{2} \\\\+[0-9]{4}/ \\\\1/\" | column -s \"}\" -t | less -FXRS; }; f"
+	largest = "!~/.githelpers largest"
 	fm = merge --no-ff
 	fb = new-fb
 	thaw = "!~/.githelpers thaw"

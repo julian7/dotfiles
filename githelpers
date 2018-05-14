@@ -1,5 +1,24 @@
 #!/usr/bin/env zsh
 
+numformat() {
+    if type -a numfmt > /dev/null; then
+        numfmt "$@"
+    elif type -a gnumfmt > /dev/null; then
+        gnumfmt "$@"
+    else
+        cat
+    fi
+}
+
+largest() {
+    topn=${1:-10}
+    git rev-list --objects --all |
+    git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' |
+    awk '/^blob/ {print substr($0,6)}' |
+    sort -k2nr | head -n "$topn" | cut -c 1-12,41- |
+    numformat --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest
+}
+
 # git freeze and thaw
 # written by James Macaulay
 # https://gist.github.com/jamesmacaulay/582757
