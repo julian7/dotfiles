@@ -8,3 +8,4 @@ vendor/rbx
 *.swp
 *.sublime-workspace
 .idea/
+.vscode/
