@@ -52,6 +52,7 @@ Notable settings:
 * smt: sudo multitool (ClearCase)
 * serve: simple ruby-based static webserver
 * t: tmux -u (tmux)
+* vaultauth: runs userpass authentication to vault
 * vi: set to vim or mvim (if installed)
 
 ## GIT aliases
