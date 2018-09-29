@@ -47,6 +47,7 @@ Notable settings:
 * mt: multitool (ClearCase)
 * powit: configures pow to pick up rack app in current dir
 * r: script/rails (ruby)
+* reagent: re-runs `gpg-agent` in case it becomes unavailable
 * sct: sudo cleartool (ClearCase)
 * smt: sudo multitool (ClearCase)
 * serve: simple ruby-based static webserver
