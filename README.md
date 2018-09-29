@@ -110,7 +110,7 @@ which are loaded at the end of the respective original scripts.
 
 ### OSX-specific
 
-Use [Homebrew](http://mxcl.github.com/homebrew/). This is the easiest way of
+Use [Homebrew](https://brew.sh/). This is the easiest way of
 managing packages.
 
 ## Extensions in mind
@@ -131,7 +131,6 @@ managing packages.
 * [pinentry-mac](https://github.com/GPGTools/pinentry-mac): GUI-based
   pinentry app for MacOS. Currently this is the pinentry application for
   GnuPG. Install: brew install pinentry-mac
-* [pow](http://pow.cx) (MacOS only): zero-config rack app server.
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment:
   brew install rbenv / see README
 * [powerline-go](https://github.com/justjanne/powerline-go): `go get -u
@@ -146,7 +145,7 @@ managing packages.
 * tmux: terminal multiplexer. You will love it, especially if you use PuTTY or
   any non-tabbed terminal clients.
 * [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager.
-  Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install.
+  Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install, and then run `vim -c PlugInstall -c exit -c exit` to configure.
 * [yarn](https://yarnpkg.com/): Alternative to Node Package Manager,
   especially for client-base javascript frameworks. Install with `sudo
   npm -g install yarn`.
