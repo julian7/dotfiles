@@ -130,6 +130,9 @@ managing packages.
   Currently requires a MacOS-only pinentry program. Install: brew install gnupg
 * gvim / macvim: powerful text file editor. brew install macvim / apt-get
   install vim-gnome.
+* [Iosevka](https://github.com/be5invis/Iosevka) font. Narrow, but
+  well-readable. It has ligatures and powerline support. Install:
+  `brew tap caskroom/fonts && brew cask install font-iosevka`
 * [pinentry-mac](https://github.com/GPGTools/pinentry-mac): GUI-based
   pinentry app for MacOS. Currently this is the pinentry application for
   GnuPG. Install: brew install pinentry-mac
