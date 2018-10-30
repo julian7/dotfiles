@@ -10,6 +10,6 @@ if whichX vault; then
         fi
         uname="$1"
         shift
-        VAULT_TOKEN=$(vault login -token-only -method=userpass username="$uname" "$@")
+        export VAULT_TOKEN=$(vault login -token-only -method=userpass username="$uname" "$@")
     }
 fi
