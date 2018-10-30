@@ -9,3 +9,4 @@ vendor/rbx
 *.sublime-workspace
 .idea/
 .vscode/
+.envrc
