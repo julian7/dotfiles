@@ -1,6 +1,3 @@
-[user]
-	name = Balazs Nagy
-	email = julsevern@gmail.com
 [alias]
 	a = add
 	aa = add --all
