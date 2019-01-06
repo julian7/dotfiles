@@ -149,6 +149,7 @@ managing packages.
   rbenv: see README
 * tmux: terminal multiplexer. You will love it, especially if you use PuTTY or
   any non-tabbed terminal clients.
+* [rust](https://www.rust-lang.org/): Rust programming language. Install with `curl https://sh.rustup.rs -sSf | sh`.
 * [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager.
   Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install, and then run `vim -c PlugInstall -c exit -c exit` to configure.
 * [yarn](https://yarnpkg.com/): Alternative to Node Package Manager,
