@@ -9,12 +9,10 @@ later, as a fallback).
 Most parts of the config is separated into various .zsh files in ~/.zsh.d.
 Notable settings:
 
-* ClearCase: aliases and paths
 * editor: finds proper EDITOR var, creates some convenience aliases
 * git: git prompt
 * osx-proxy-icons: adds proxy icon support to OSX Terminal
 * paths: extra path
-* pow: pow commands
 * chruby: chruby bootstrap (if installed)
 * rbenv: rbenv bootstrap (if installed)
 * ruby: some ruby and ruby on rails aliases
@@ -22,7 +20,6 @@ Notable settings:
 * ssh: GnuPG agent support
 * powerline-go: Powerline-like prompt (if installed)
 * tmux: aliases and ssh title replacer function
-* dvm: dvm bootstrap (if installed)
 
 ## Other dotfiles
 
@@ -37,19 +34,14 @@ Notable settings:
 * be: bundle exec (ruby)
 * ce: chef exec (chefdk)
 * cbe: chef exec bundle exec (chefdk)
-* ct: cleartool (ClearCase)
 * dstat (dip) shows docker images' IP addresses and memory consumption
 * dps: nicer docker ps
 * grep: grep -a --color=always (general)
 * gvim: set to mvim (if installed)
 * joe: set to 'vim' on systems where joe is not installed
 * mate\_wait: non-forking textmate
-* mt: multitool (ClearCase)
-* powit: configures pow to pick up rack app in current dir
 * r: script/rails (ruby)
 * reagent: re-runs `gpg-agent` in case it becomes unavailable
-* sct: sudo cleartool (ClearCase)
-* smt: sudo multitool (ClearCase)
 * serve: simple ruby-based static webserver
 * t: tmux -u (tmux)
 * vaultauth: runs userpass authentication to vault
@@ -122,8 +114,6 @@ managing packages.
 * [chruby](https://github.com/postmodern/chruby): ruby selector environment
 * [direnv](https://github.com/direnv/direnv): Environment switcher for
   shell. Install with `go get -u github.com/direnv/direnv`.
-* [dvm](https://getcarina.com/blog/docker-version-manager/): Docker Version Manager.
-  Run `curl -sL https://download.getcarina.com/dvm/latest/install.sh | sh` to install.
 * [git-process](https://github.com/jdigger/git-process): gem install
   git-process
 * [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation.
