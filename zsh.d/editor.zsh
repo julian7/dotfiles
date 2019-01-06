@@ -1,5 +1,5 @@
 whence -p joe > /dev/null || alias joe=vim
-for editor in "subl -w" "mate -w" "mvim -f" vim joe vi; do
+for editor in "code -w" "subl -w" "mate -w" "mvim -f" vim joe vi; do
   if whence -p ${editor% *} > /dev/null; then
     export EDITOR=${editor}
     break
