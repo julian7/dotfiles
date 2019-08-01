@@ -23,3 +23,6 @@ for srcfile ($HOME/.zsh.d/*.zsh) source $srcfile
 
 # Load local customizations
 test -f $HOME/.zshrc.local && source $HOME/.zshrc.local
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
