@@ -34,6 +34,7 @@ Notable settings:
 * be: bundle exec (ruby)
 * ce: chef exec (chefdk)
 * cbe: chef exec bundle exec (chefdk)
+* dex: docker exec -ti, running sh by default
 * dstat (dip) shows docker images' IP addresses and memory consumption
 * dps: nicer docker ps
 * grep: grep -a --color=always (general)
