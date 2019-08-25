@@ -16,5 +16,6 @@ PATH=`echo $PATH |
   addpath /usr/local/opt/node@6/bin |
   addpath /usr/local/sbin |
   addpath /usr/local/bin |
+  addpath $HOME/.bin |
   addpath $HOME/bin`
 export PATH

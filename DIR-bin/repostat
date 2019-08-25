@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+find . -name \*.git 2>/dev/null |
+while read gitdir; do
+    repopath=${gitdir%/.git}
+    declare -i untracked=0 conflicted=0 staged=0 notstaged=0
+    while IFS='\n' read -n2 status; do
+        read x
+        if [[ "$status" == "##" ]]; then
+            continue
+        fi
+        if [[ "$status" == "??" ]]; then
+            untracked+=1
+        elif [[ "$status" == [DU][DU] || "$status" == [AU][AU] ]]; then
+            conflicted+=1
+        elif [[ ${status[0]} != " " ]]; then
+            staged+=1
+        elif [[ "$status" == "?[^ ]" ]]; then
+            unstaged+=1
+        fi
+    done < <(git -C $repopath status --porcelain -b --ignore-submodules 2>/dev/null)
+    code=""
+    ret="$repopath:"
+    if ((staged+unstaged+conflicted+untracked==0)); then
+        code="☑️"
+        ret="${ret} clean"
+    else
+        code="⚠️"
+        if (( staged > 0 )); then
+            ret="${ret} $staged staged"
+        fi
+        if (( unstaged > 0 )); then
+            ret="${ret} $unstaged unstaged"
+        fi
+        if (( conflicted > 0 )); then
+            ret="${ret} $conflicted conflicted"
+        fi
+        if (( untracked > 0 )); then
+            ret="${ret} $untracked untracked"
+        fi
+    fi
+    echo "$code    $ret"
+done

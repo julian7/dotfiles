@@ -65,6 +65,10 @@ Notable settings:
 * unadd: reset HEAD
 * upstream: shows current branch's default remote
 
+## scripts
+
+* repostat: finds git repos in your path, and shows repo cleanliness
+
 ## Installation
 
 * Clone repo: `git clone https://github.com/julian7/dotfiles.git`
