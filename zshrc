@@ -1,3 +1,4 @@
+echo "zshrc"
 # Add function path
 fpath=($HOME/.zsh.d $fpath)
 
@@ -17,6 +18,9 @@ whichX() {
 # Default aliases
 [[ $(uname) = *BSD ]] || alias grep='grep -a --color=always'
 whichX ack-grep && alias ack=ack-grep
+
+# Default variables
+export PROMPT='%n@%m [%F{blue}%~%f] %# '
 
 # Load configuration source files
 for srcfile ($HOME/.zsh.d/*.zsh) source $srcfile
