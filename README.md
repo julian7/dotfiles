@@ -18,7 +18,7 @@ Notable settings:
 * ruby: some ruby and ruby on rails aliases
 * settings: ZSH settings
 * ssh: GnuPG agent support
-* powerline-go: Powerline-like prompt (if installed)
+* GBT: Powerline-like prompt (if installed). Alternatively, you can use powerline-go.
 * tmux: aliases and ssh title replacer function
 
 ## Other dotfiles
@@ -40,6 +40,7 @@ Notable settings:
 * grep: grep -a --color=always (general)
 * gvim: set to mvim (if installed)
 * joe: set to 'vim' on systems where joe is not installed
+* killagent: more drastic `gpg-agent` restarter, when `reagent` is not enough
 * mate\_wait: non-forking textmate
 * r: script/rails (ruby)
 * reagent: re-runs `gpg-agent` in case it becomes unavailable
@@ -123,18 +124,19 @@ managing packages.
   git-process
 * [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation.
   Currently requires a MacOS-only pinentry program. Install: brew install gnupg
+* [GBT](https://github.com/jtyr/gbt): Go Bullet Train. A highly configurable, powerline-like shell prompt. Preferred over powerline-go.
 * gvim / macvim: powerful text file editor. brew install macvim / apt-get
   install vim-gnome.
 * [Iosevka](https://github.com/be5invis/Iosevka) font. Narrow, but
   well-readable. It has ligatures and powerline support. Install:
   `brew tap caskroom/fonts && brew cask install font-iosevka`
+* [Nerd forts for Iosevka](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka): an extended Iosevka font for GBT use.
 * [pinentry-mac](https://github.com/GPGTools/pinentry-mac): GUI-based
   pinentry app for MacOS. Currently this is the pinentry application for
   GnuPG. Install: brew install pinentry-mac
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment:
   brew install rbenv / see README
-* [powerline-go](https://github.com/justjanne/powerline-go): `go get -u
-  github.com/justjanne/powerline-go`
+* [powerline-go](https://github.com/justjanne/powerline-go): Powerline-like shell prompt. Use of GBP is more recommended. Install: `go get -u github.com/justjanne/powerline-go`
 * [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir
   ~/.rbenv/plugins; cd ~/.rbenv/plugins; git clone
   https://github.com/sstephenson/rbenv-vars.git`
