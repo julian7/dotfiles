@@ -10,6 +10,9 @@ zstyle :compinstall filename "${HOME}/.zshrc"
 
 autoload -Uz compinit
 compinit
+autoload -U promptinit
+promptinit
+setopt PROMPT_SUBST
 
 whichX() {
     whence -c "$@" > /dev/null 2>&1
