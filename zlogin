@@ -1,4 +1,3 @@
-echo "zlogin"
 export PAGER=less
 export LESS="-R -m"
 export HISTFILE=$HOME/.zshist

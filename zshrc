@@ -1,4 +1,3 @@
-echo "zshrc"
 # Add function path
 fpath=($HOME/.zsh.d $fpath)
 
