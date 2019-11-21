@@ -41,6 +41,7 @@ Notable settings:
 * gvim: set to mvim (if installed)
 * joe: set to 'vim' on systems where joe is not installed
 * killagent: more drastic `gpg-agent` restarter, when `reagent` is not enough
+* kubesh: runs a docker image on kubernetes interactively
 * mate\_wait: non-forking textmate
 * r: script/rails (ruby)
 * reagent: re-runs `gpg-agent` in case it becomes unavailable
