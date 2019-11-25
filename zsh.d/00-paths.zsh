@@ -11,12 +11,16 @@ addpath() {
   echo "$new${${orig%:}%:}"
 }
 
-PATH=`echo $PATH |
-  addpath /usr/local/share/npm/bin |
-  addpath /usr/local/opt/node@6/bin |
-  addpath /usr/local/sbin |
-  addpath /usr/local/bin |
-  addpath $HOME/.cargo/bin |
-  addpath $HOME/.bin |
-  addpath $HOME/bin`
-export PATH
+path=(
+  $HOME/bin
+  $HOME/.bin
+  $HOME/.cargo/bin
+  $HOME/.rbenv/bin
+  /usr/local/bin
+  /usr/local/sbin
+  /usr/bin
+  /bin
+  /usr/sbin
+  /sbin
+  /opt/X11/bin
+)
