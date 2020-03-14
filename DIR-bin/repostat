@@ -1,6 +1,44 @@
 #!/usr/bin/env bash
 
-find . -name \*.git 2>/dev/null |
+silent=0
+dir=.
+
+report() {
+    local path=${1}
+    local msg=${2}
+    local code="⚠️"
+
+    if [[ "$msg" == "clean" ]]; then
+        ((silent == 1)) && return
+        code="☑️"
+    fi
+
+    echo "$code    $path: $msg"
+}
+
+while getopts "hs" opt; do
+    case ${opt} in
+    h)
+        echo "Usage:"
+        echo "    ${0} [-h] [-s] [directory]"
+        echo "Options:"
+        echo "    -h           This help"
+        echo "    -s           Silent mode: no reports on clean repositories"
+        echo "    directory    Path where tests should start (default: .)"
+        exit 0
+        ;;
+    s)
+        silent=1
+        ;;
+    esac
+done
+shift $((OPTIND-1))
+
+if (($# >= 1)); then
+    dir=${1}
+fi
+
+find ${dir} -name \*.git 2>/dev/null |
 while read gitdir; do
     repopath=${gitdir%/.git}
     declare -i untracked=0 conflicted=0 staged=0 notstaged=0
@@ -19,25 +57,22 @@ while read gitdir; do
             unstaged+=1
         fi
     done < <(git -C $repopath status --porcelain -b --ignore-submodules 2>/dev/null)
-    code=""
-    ret="$repopath:"
     if ((staged+unstaged+conflicted+untracked==0)); then
-        code="☑️"
-        ret="${ret} clean"
+        report ${repopath} clean
     else
-        code="⚠️"
+        info=()
         if (( staged > 0 )); then
-            ret="${ret} $staged staged"
+            info+=("$staged staged")
         fi
         if (( unstaged > 0 )); then
-            ret="${ret} $unstaged unstaged"
+            info+=("$unstaged unstaged")
         fi
         if (( conflicted > 0 )); then
-            ret="${ret} $conflicted conflicted"
+            info+=("$conflicted conflicted")
         fi
         if (( untracked > 0 )); then
-            ret="${ret} $untracked untracked"
+            info+=("$untracked untracked")
         fi
+        report "$repopath" "${info[@]}"
     fi
-    echo "$code    $ret"
 done
