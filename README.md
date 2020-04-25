@@ -1,8 +1,7 @@
 # Julian7's dotfiles
 
-This is my more or less educated guess on how to use a unix system. My shell of
-choice is ZSH, therefore you won't find any other configurations (maybe bash
-later, as a fallback).
+This is my more or less educated guess on how to use a unix system. I use ZSH and FISH,
+therefore you won't find any other configurations (maybe bash later, as a fallback).
 
 ## ZSH config
 
@@ -21,13 +20,40 @@ Notable settings:
 * GBT: Powerline-like prompt (if installed). Alternatively, you can use powerline-go.
 * tmux: aliases and ssh title replacer function
 
+## FISH config
+
+Fish settings are in ~/.config/fish/conf.d directory, which is 100% controlled by
+this repository. Notable settings:
+
+* paths: it adds a lot of convenience paths such as $HOME/bin and $HOME/.bin
+* chefdk: aliases
+* direnv: loads fish hooks for direnv
+* docker: convenience aliases
+* editor: selects best editor, sets EDITOR environment variable, convenience aliases
+* fisher-bootstrap: downloads and runs fisher package manager
+* go: best practice variables
+* k8s: convenience aliases
+* node: yarn settings
+* ruby: convenience aliases
+* ssh: yubikey's OpenPGP ssh agent handling
+* tmux: aliases
+* vault: auth alias
+
+Fish plugins are managed by fisher, and installed fisher plugins are controlled by
+this repository.
+
+### Plugins
+
+* [fisher](https://github.com/jorgebucaran/fisher): package manager for fish
+* [spacefish](https://github.com/matchai/spacefish): fish shell prompt
+
 ## Other dotfiles
 
 * ack
 * git: global gitconfig and gitignore
 * tmux
 
-## ZSH aliases and functions
+## aliases and functions
 
 * ack: ack-grep (if ack-grep is installed)
 * b: bundle (ruby)
@@ -106,7 +132,7 @@ which are loaded at the end of the respective original scripts.
 
 ## Requirements
 
-* zsh
+* zsh / fish
 * git
 
 ### OSX-specific

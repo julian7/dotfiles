@@ -1,48 +1,65 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 LANG=C
 
-handle_file() {
-  file=${1}
-  prefix=${2:-}
-  dirname=${3:-}
-  instfile="$HOME/.${prefix}${file}"
-  fullname="$PWD/${dirname}${file}"
-  if [ -e "$instfile" ]; then
-    if test -L "$instfile" -a "x"`readlink "$instfile"` = "x$fullname"; then
+fixpath () (
+  if [[ -d $1 ]]; then
+    OLDPWD=- CDPATH= cd -P -- "$1" && pwd
+  else
+    OLDPWD=- CDPATH= cd -P -- "${1%/*}" && printf '%s/%s\n' "$PWD" "${1##*/}"
+  fi
+)
+
+install_dir() {
+  local source="${1}"
+  local destination="${2}"
+  local prefix="${3:-}"
+
+  for name in "${source}"/*; do
+    [[ "$name" =~ /[A-Z]*\.[a-z0-9]*$ ]] && continue
+    local base="${name#${source}/}"
+    base=${base#DIR-}
+    local indest="${destination}/${prefix}${base}"
+    if [[ -d "${name}" && "${name}" =~ /DIR-[^/]*$ ]]; then
+      mkdir -p "${indest}"
+      install_dir "${name}" "${indest}"
+    else
+      install_file "${name}" "${indest}"
+    fi
+  done
+}
+
+install_file() {
+  local source="${1}"
+  local destination="${2}"
+
+  if [[ -e "${destination}" ]]; then
+    if [[ -L ${destination} && "$(readlink "${destination}")" == "$(fixpath "${source}")" ]]; then
       return
     fi
-    echo -n "${instfile#$HOME/} already exists. What now? Diff / Replace / Skip [drs]: "
+    echo -n "${destination#$HOME/} already exists. What now? Diff / Replace / Skip [drs]: "
     read R
     case $R in
       d|D)
-        diff -sudw ${instfile} ${fullname}
-        handle_file ${file} ${prefix} ${dirname}
+        diff -sudw "${destination}" "${source}"
+        install_file "${source}" "${destination}"
         return
         ;;
       r|R)
-        mv ${instfile} ${instfile}.dotfile-$$
+        local newdest="${destination}.dotfile-$$"
+        mv "${destination}" "${newdest}"
+        echo "Storing '${destination}' as '${newdest}'"
         ;;
       s|S)
         return
         ;;
     esac
   fi
-  test -e ${instfile} || ln -s ${fullname} ${instfile}
+  test -e "${destination}" || ln -s "${source}" "${destination}"
 }
 
 cd `dirname $0`
 
-for file in `ls -d [a-z]*`; do
-  handle_file ${file}
-done
-
-for dir in `ls -d DIR-[a-z]* 2>/dev/null`; do
-  prefix=${dir#DIR-}
-  mkdir -p "${HOME}/.${prefix}"
-  for file in `ls ${dir}`; do
-    handle_file ${file} ${prefix}/ ${dir}/
-  done
-done
+install_dir "$PWD" "$HOME" "."
 
 touch $HOME/.gitconfig
