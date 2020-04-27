@@ -145,8 +145,6 @@ managing packages.
 
 ## Extensions in mind
 
-* ack: power search. Install: brew install ack (on OSX), apt-get install
-  ack-grep (on Debian / Ubuntu)
 * [chruby](https://github.com/postmodern/chruby): ruby selector environment
 * [direnv](https://github.com/direnv/direnv): Environment switcher for shell. Install with `go get -u github.com/direnv/direnv`.
 * [git-process](https://github.com/jdigger/git-process): `gem install git-process`
@@ -159,6 +157,7 @@ managing packages.
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment: `brew install rbenv` / see README
 * [powerline-go](https://github.com/justjanne/powerline-go): Powerline-like shell prompt. Use of GBP is more recommended. Install: `go get -u github.com/justjanne/powerline-go`
 * [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir ~/.rbenv/plugins; cd ~/.rbenv/plugins; git clone https://github.com/sstephenson/rbenv-vars.git`
+* [ripgrep](https://github.com/BurntSushi/ripgrep): blazing fast `grep -r` replacement. Install: `brew install ripgrep` / `apt-get install ripgrep`.
 * [ruby-install](https://github.com/postmodern/ruby-install): ruby builder for chruby: see README
 * [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for rbenv: see README
 * [tmux](https://github.com/tmux/tmux): terminal multiplexer. You will love it, especially if you use PuTTY or any non-tabbed terminal clients.
