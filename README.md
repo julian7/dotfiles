@@ -147,6 +147,7 @@ managing packages.
 
 * [chruby](https://github.com/postmodern/chruby): ruby selector environment
 * [direnv](https://github.com/direnv/direnv): Environment switcher for shell. Install with `go get -u github.com/direnv/direnv`.
+* [fzf](https://github.com/junegunn/fzf): command line fuzzy finder in shell history. Install with `brew install fzf`, then run `/usr/local/opt/fzf/install --key-bindings --completion --no-update-rc`.
 * [git-process](https://github.com/jdigger/git-process): `gem install git-process`
 * [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation. Currently requires a MacOS-only pinentry program. Install: `brew install gnupg`
 * [GBT](https://github.com/jtyr/gbt): Go Bullet Train (for bash and zsh). A highly configurable, powerline-like shell prompt. Preferred over powerline-go.
