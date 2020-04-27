@@ -16,6 +16,7 @@ install_dir() {
   local prefix="${3:-}"
 
   for name in "${source}"/*; do
+    [[ "$name" =~ /\*$ ]] && break
     [[ "$name" =~ /[A-Z]*\.[a-z0-9]*$ ]] && continue
     local base="${name#${source}/}"
     base=${base#DIR-}
