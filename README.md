@@ -148,40 +148,24 @@ managing packages.
 * ack: power search. Install: brew install ack (on OSX), apt-get install
   ack-grep (on Debian / Ubuntu)
 * [chruby](https://github.com/postmodern/chruby): ruby selector environment
-* [direnv](https://github.com/direnv/direnv): Environment switcher for
-  shell. Install with `go get -u github.com/direnv/direnv`.
-* [git-process](https://github.com/jdigger/git-process): gem install
-  git-process
-* [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation.
-  Currently requires a MacOS-only pinentry program. Install: brew install gnupg
-* [GBT](https://github.com/jtyr/gbt): Go Bullet Train. A highly configurable, powerline-like shell prompt. Preferred over powerline-go.
-* gvim / macvim: powerful text file editor. brew install macvim / apt-get
-  install vim-gnome.
-* [Iosevka](https://github.com/be5invis/Iosevka) font. Narrow, but
-  well-readable. It has ligatures and powerline support. Install:
-  `brew tap caskroom/fonts && brew cask install font-iosevka`
-* [Nerd forts for Iosevka](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka): an extended Iosevka font for GBT use.
-* [pinentry-mac](https://github.com/GPGTools/pinentry-mac): GUI-based
-  pinentry app for MacOS. Currently this is the pinentry application for
-  GnuPG. Install: brew install pinentry-mac
-* [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment:
-  brew install rbenv / see README
+* [direnv](https://github.com/direnv/direnv): Environment switcher for shell. Install with `go get -u github.com/direnv/direnv`.
+* [git-process](https://github.com/jdigger/git-process): `gem install git-process`
+* [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation. Currently requires a MacOS-only pinentry program. Install: `brew install gnupg`
+* [GBT](https://github.com/jtyr/gbt): Go Bullet Train (for bash and zsh). A highly configurable, powerline-like shell prompt. Preferred over powerline-go.
+* gvim / macvim: powerful text file editor. `brew install macvim` / `apt-get install vim-gnome`.
+* [Iosevka](https://github.com/be5invis/Iosevka) font. Narrow, but well-readable. It has ligatures and powerline support. Install: `brew tap caskroom/fonts && brew cask install font-iosevka`
+* [Nerd forts for Iosevka](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka): an extended Iosevka font for powerline / GBT / spacefish use.
+* [pinentry-mac](https://github.com/GPGTools/pinentry-mac): GUI-based pinentry app for MacOS. Currently this is the pinentry application for GnuPG. Install: `brew install pinentry-mac`
+* [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment: `brew install rbenv` / see README
 * [powerline-go](https://github.com/justjanne/powerline-go): Powerline-like shell prompt. Use of GBP is more recommended. Install: `go get -u github.com/justjanne/powerline-go`
-* [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir
-  ~/.rbenv/plugins; cd ~/.rbenv/plugins; git clone
-  https://github.com/sstephenson/rbenv-vars.git`
-* [ruby-install](https://github.com/postmodern/ruby-install): ruby builder for
-  chruby: see README
-* [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for
-  rbenv: see README
-* tmux: terminal multiplexer. You will love it, especially if you use PuTTY or
-  any non-tabbed terminal clients.
+* [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir ~/.rbenv/plugins; cd ~/.rbenv/plugins; git clone https://github.com/sstephenson/rbenv-vars.git`
+* [ruby-install](https://github.com/postmodern/ruby-install): ruby builder for chruby: see README
+* [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for rbenv: see README
+* [tmux](https://github.com/tmux/tmux): terminal multiplexer. You will love it, especially if you use PuTTY or any non-tabbed terminal clients.
 * [rust](https://www.rust-lang.org/): Rust programming language. Install with `curl https://sh.rustup.rs -sSf | sh`.
 * [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager.
   Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install, and then run `vim -c PlugInstall -c exit -c exit` to configure.
-* [yarn](https://yarnpkg.com/): Alternative to Node Package Manager,
-  especially for client-base javascript frameworks. Install with `sudo
-  npm -g install yarn`.
+* [yarn](https://yarnpkg.com/): Alternative to Node Package Manager, especially for client-base javascript frameworks. Install with `sudo npm -g install yarn`.
 
 ## Copyright
 
