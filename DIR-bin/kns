@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if (($# != 1)); then
+    echo "Usage: $0 <namespace>"
+    echo "Available kubernetes namespaces:"
+    kubectl get namespaces -o=jsonpath="{range .items[*]}{.metadata.name}{'\t'}{end}{'\n'}" | column -t
+    exit 1
+fi
+
+kubectl config set-context --current --namespace="${1}" >/dev/null && echo "Switched namespace to \"$1\"."

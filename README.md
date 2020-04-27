@@ -95,6 +95,9 @@ this repository.
 
 ## scripts
 
+* colorcolumn: just like 'column', but ANSI-colors-aware
+* kcx: kubernetes context switcher
+* kns: kubernetes namespace switcher
 * repostat: finds git repos in your path, and shows repo cleanliness
 
 ## Installation

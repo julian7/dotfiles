@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if (($# != 1)); then
+    echo "Usage: $0 <context>"
+    echo "Available kubernetes contexts:"
+    kubectl config view -o jsonpath='{range .contexts[*]}{.name}{"\t"}{end}{"\n"}' | column -t
+    exit 1
+fi
+
+kubectl config use-context "$1"
