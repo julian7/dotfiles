@@ -1,4 +1,5 @@
 alias kubesh='kubectl run --generator=run-pod/v1 --rm -ti kubesh-$RANDOM --image'
+alias k=kubectl
 
 complete -c kcx -f
 complete -c kcx -a "(kubectl config view -o jsonpath='{range .contexts[?(@.name != \"'(kubectl config current-context)'\")]}{.name}{\"\n\"}{end}')"

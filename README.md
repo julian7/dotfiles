@@ -66,6 +66,7 @@ this repository.
 * grep: grep -a --color=always (general)
 * gvim: set to mvim (if installed)
 * joe: set to 'vim' on systems where joe is not installed
+* k: kubectl
 * killagent: more drastic `gpg-agent` restarter, when `reagent` is not enough
 * kubesh: runs a docker image on kubernetes interactively
 * mate\_wait: non-forking textmate
