@@ -12,4 +12,4 @@ function _set_tmux_title
         printf "\e]0;%s\a" $title
     end
 end
-_set_tmux_title
+isatty && _set_tmux_title
