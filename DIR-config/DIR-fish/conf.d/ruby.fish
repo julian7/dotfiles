@@ -1,4 +1,4 @@
-set -xa PATH /usr/local/opt/ruby/bin
+set -ga fish_user_paths /usr/local/opt/ruby/bin
 set -xp LDFLAGS "-L/usr/local/opt/ruby/lib"
 set -xp CPPFLAGS "-I/usr/local/opt/ruby/include"
 
