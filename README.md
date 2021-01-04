@@ -38,6 +38,8 @@ this repository. Notable settings:
 * ssh: yubikey's OpenPGP ssh agent handling
 * tmux: aliases
 * vault: auth alias
+* wsl2: Yubikey support on Windows WSL2 environment: connects gpg-agent and
+  ssh-agent with gpg4win, if wsl2-ssh-pageant.exe is available
 
 Fish plugins are managed by fisher, and installed fisher plugins are controlled by
 this repository.
@@ -124,6 +126,7 @@ Local changes can go to
 * `~/.zshrc.local`
 * `~/.zshenv.local`
 * `~/.zlogin.local`
+* `~/.config/fish/config.fish` (in case of using fish shell)
 
 which are loaded at the end of the respective original scripts.
 
@@ -166,6 +169,7 @@ managing packages.
 * [rust](https://www.rust-lang.org/): Rust programming language. Install with `curl https://sh.rustup.rs -sSf | sh`.
 * [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager.
   Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install, and then run `vim -c PlugInstall -c exit -c exit` to configure.
+* [wsl2-ssh-pageant](https://github.com/BlackReloaded/wsl2-ssh-pageant): tunnels gpg4win's gpg agent into wsl2. To install, put the windows executable into your `$HOME/.ssh` in your wsl2 environment.
 * [yarn](https://yarnpkg.com/): Alternative to Node Package Manager, especially for client-base javascript frameworks. Install with `sudo npm -g install yarn`.
 
 ## Copyright
