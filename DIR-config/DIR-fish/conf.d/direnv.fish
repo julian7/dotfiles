@@ -1,1 +1,3 @@
-command -qs direnv && eval (direnv hook fish)
+if command -qs direnv
+  direnv hook fish | source
+end
