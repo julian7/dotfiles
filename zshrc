@@ -1,4 +1,4 @@
-SHELL=$0
+SHELL=${0#-}
 # Add function path
 fpath=($HOME/.zsh.d $fpath)
 
