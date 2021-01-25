@@ -1,6 +1,8 @@
 begin
-    if ! functions -q fisher
-        curl https://git.io/fisher | source &&
-        fisher install jorgebucaran/fisher
+    if ! functions -q fisher && command -qs curl && [ -z "$_fish_installing" ]
+        set -x _fish_installing 1
+        curl -sSL https://git.io/fisher | source &&
+        fisher update
+        set -u _fish_installing
     end
 end
