@@ -71,6 +71,7 @@ this repository.
 * k: kubectl
 * killagent: more drastic `gpg-agent` restarter, when `reagent` is not enough
 * kubesh: runs a docker image on kubernetes interactively
+* ls: uses [exa](https://github.com/ogham/exa) if available
 * mate\_wait: non-forking textmate
 * r: script/rails (ruby)
 * reagent: re-runs `gpg-agent` in case it becomes unavailable
@@ -153,6 +154,7 @@ managing packages.
 
 * [chruby](https://github.com/postmodern/chruby): ruby selector environment
 * [direnv](https://github.com/direnv/direnv): Environment switcher for shell. Install with `go get -u github.com/direnv/direnv`.
+* [exa](https://github.com/ogham/exa): Modern ls replacement, written in rust. It comes with a single binary, but can be installed with `brew install exa` too, on MacOS.
 * [fzf](https://github.com/junegunn/fzf): command line fuzzy finder in shell history. Install with `brew install fzf`, then run `/usr/local/opt/fzf/install --key-bindings --completion --no-update-rc`.
 * [git-process](https://github.com/jdigger/git-process): `gem install git-process`
 * [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation. Currently requires a MacOS-only pinentry program. Install: `brew install gnupg`
