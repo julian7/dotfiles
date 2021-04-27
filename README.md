@@ -78,7 +78,8 @@ this repository.
 * serve: simple ruby-based static webserver
 * t: tmux -u (tmux)
 * vaultauth: runs userpass authentication to vault
-* vi: set to vim or mvim (if installed)
+* vi: set to nvim, vim or mvim (if installed)
+* vim: set to nvim (if installed)
 
 ## GIT aliases
 
@@ -172,7 +173,7 @@ managing packages.
 * [tmux](https://github.com/tmux/tmux): terminal multiplexer. You will love it, especially if you use PuTTY or any non-tabbed terminal clients.
 * [rust](https://www.rust-lang.org/): Rust programming language. Install with `curl https://sh.rustup.rs -sSf | sh`.
 * [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager.
-  Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install, and then run `vim -c PlugInstall -c exit -c exit` to configure.
+  Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install, and then run `vim -c PlugInstall -c exit -c exit` to configure. Neovim users should install it by `curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` instead.
 * [wsl2-ssh-pageant](https://github.com/BlackReloaded/wsl2-ssh-pageant): tunnels gpg4win's gpg agent into wsl2. To install, put the windows executable into your `$HOME/.ssh` in your wsl2 environment.
 * [yarn](https://yarnpkg.com/): Alternative to Node Package Manager, especially for client-base javascript frameworks. Install with `sudo npm -g install yarn`.
 

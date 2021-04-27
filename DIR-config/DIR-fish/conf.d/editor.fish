@@ -2,7 +2,7 @@ command -qs joe || alias joe=vim
 
 begin
     set -l editor
-    for editor in "code -w" "subl -w" "mate -w" "mvim -f" vim joe vi
+    for editor in "code -w" "subl -w" "mate -w" "nvim" "mvim -f" vim joe vi
         if command -qs (string split " " $editor)[1]
             set -x EDITOR "$editor"
             break
@@ -10,9 +10,16 @@ begin
     end
 end
 
-if [ "$EDITOR" = mvim ]
+switch "$EDITOR";
+case 'mvim*'
     alias vi=mvim
     alias gvim=mvim
-else
+case '*'
     alias vi=vim
+end
+
+if command -qs nvim
+    alias vi=nvim
+    alias vim=nvim
+    alias gvim=nvim
 end
