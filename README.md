@@ -95,6 +95,7 @@ this repository.
 * h: pretty oneline history
 * largest: shows largest *n* (default: 10) files in git repository
 * man: help
+* s: switch (replacing checkout)
 * st: status -sb (shorter status)
 * unadd: reset HEAD
 * upstream: shows current branch's default remote
