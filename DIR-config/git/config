@@ -1,22 +1,22 @@
 [alias]
 	a = add
 	aa = add --all
+	amend = commit --amend --no-edit
+	br = branch
 	st = status -sb
 	ci = commit
 	co = checkout
 	di = diff
 	dc = diff --cached
-	unadd = reset HEAD
-	br = branch
-	man = help
+	fb = new-fb
+	fm = merge --no-ff
+	freeze = "!~/.githelpers freeze"
 	h = "!f() { git log --graph --abbrev-commit --color=always --pretty=format:\"%C(yellow)%h%Creset}%Cgreen(%ai)%Creset}%C(bold blue)<%an>%Creset}%C(red)%d%Creset}%s\" \"$@\" | sed -Ee \"s/ ([0-9]{2}:[0-9]{2}):[0-9]{2} \\\\+[0-9]{4}/ \\\\1/\" | colorcolumn FS=\"}\" | less -FXRS; }; f"
 	largest = "!~/.githelpers largest"
-	fm = merge --no-ff
-	fb = new-fb
+	man = help
 	thaw = "!~/.githelpers thaw"
-	freeze = "!~/.githelpers freeze"
+	unadd = reset HEAD
 	upstream = "!f() { br=$(git rev-parse --abbrev-ref HEAD); merge=$(git config branch.${br}.merge); echo $(git config branch.${br}.remote)/${merge##refs/heads/}; }; f"
-	amend = commit --amend --no-edit
 [core]
 	excludesfile = ~/.gitignore
 [gui]
