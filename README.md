@@ -90,7 +90,6 @@ this repository.
 * cp: cherry-pick
 * dc: diff --cached
 * di: diff
-* fb: new-fb (reqires git-process gem)
 * fm: full merge (merge --no-ff)
 * h: pretty oneline history
 * largest: shows largest *n* (default: 10) files in git repository
@@ -159,7 +158,6 @@ managing packages.
 * [direnv](https://github.com/direnv/direnv): Environment switcher for shell. Install with `go get -u github.com/direnv/direnv`.
 * [exa](https://github.com/ogham/exa): Modern ls replacement, written in rust. It comes with a single binary, but can be installed with `brew install exa` too, on MacOS.
 * [fzf](https://github.com/junegunn/fzf): command line fuzzy finder in shell history. Install with `brew install fzf`, then run `/usr/local/opt/fzf/install --key-bindings --completion --no-update-rc`.
-* [git-process](https://github.com/jdigger/git-process): `gem install git-process`
 * [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation. Currently requires a MacOS-only pinentry program. Install: `brew install gnupg`
 * [GBT](https://github.com/jtyr/gbt): Go Bullet Train (for bash and zsh). A highly configurable, powerline-like shell prompt. Preferred over powerline-go.
 * gvim / macvim: powerful text file editor. `brew install macvim` / `apt-get install vim-gnome`.
