@@ -87,6 +87,7 @@ this repository.
 * br: branch
 * ci: commit
 * co: checkout
+* cp: cherry-pick
 * dc: diff --cached
 * di: diff
 * fb: new-fb (reqires git-process gem)
