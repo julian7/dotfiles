@@ -37,6 +37,7 @@ this repository. Notable settings:
 * ruby: convenience aliases
 * ssh: yubikey's OpenPGP ssh agent handling
 * tmux: aliases
+* tools: aliases
 * vault: auth alias
 * wsl2: Yubikey support on Windows WSL2 environment: connects gpg-agent and
   ssh-agent with gpg4win, if wsl2-ssh-pageant.exe is available
@@ -77,6 +78,7 @@ this repository.
 * reagent: re-runs `gpg-agent` in case it becomes unavailable
 * serve: simple ruby-based static webserver
 * t: tmux -u (tmux)
+* tf: terraform
 * vaultauth: runs userpass authentication to vault
 * vi: set to nvim, vim or mvim (if installed)
 * vim: set to nvim (if installed)
