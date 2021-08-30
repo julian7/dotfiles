@@ -106,8 +106,6 @@ this repository.
 * colorcolumn: just like 'column', but ANSI-colors-aware
 * kcx: kubernetes context switcher
 * kns: kubernetes namespace switcher
-* ldapq: quick LDAP query with sorted output
-* ldapdecode: decode base64-encoded fields in ldapsearch / ldapq output
 * repostat: finds git repos in your path, and shows repo cleanliness
 
 ## Installation

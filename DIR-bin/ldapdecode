@@ -1,6 +1,0 @@
-#!/usr/bin/env perl
-
-use MIME::Base64 qw(decode_base64);
-$f = join("", <>);
-$f =~ s/^([^ :]+:): (.+)$/"$1 ".decode_base64($2)/mge;
-print $f;
