@@ -16,6 +16,13 @@ report() {
     echo "$code    $path: $msg"
 }
 
+join() {
+    local separator="$1"
+    local first="$2"
+    shift 2
+    printf "%s" "$first" "${@/#/$separator}"
+}
+
 while getopts "hs" opt; do
     case ${opt} in
     h)
@@ -42,9 +49,13 @@ find ${dir} -name \*.git 2>/dev/null |
 while read gitdir; do
     repopath=${gitdir%/.git}
     declare -i untracked=0 conflicted=0 staged=0 notstaged=0
+    declare tracking=""
     while IFS='\n' read -n2 status; do
-        read x
+        read data
         if [[ "$status" == "##" ]]; then
+            if [[ "$data" =~ \[(.+)\ (.+)\] ]]; then
+                tracking="${BASH_REMATCH[1]} by ${BASH_REMATCH[2]}"
+            fi
             continue
         fi
         if [[ "$status" == "??" ]]; then
@@ -58,21 +69,18 @@ while read gitdir; do
         fi
     done < <(git -C $repopath status --porcelain -b --ignore-submodules 2>/dev/null)
     if ((staged+unstaged+conflicted+untracked==0)); then
-        report ${repopath} clean
+        if [[ -n $tracking ]]; then
+            report ${repopath} "$tracking"
+        else
+            report ${repopath} clean
+        fi
     else
         info=()
-        if (( staged > 0 )); then
-            info+=("$staged staged")
-        fi
-        if (( unstaged > 0 )); then
-            info+=("$unstaged unstaged")
-        fi
-        if (( conflicted > 0 )); then
-            info+=("$conflicted conflicted")
-        fi
-        if (( untracked > 0 )); then
-            info+=("$untracked untracked")
-        fi
-        report "$repopath" "${info[@]}"
+        [[ -n $tracking ]] && info+=("$tracking")
+        (( staged > 0 )) && info+=("$staged staged")
+        (( unstaged > 0 )) && info+=("$unstaged unstaged")
+        (( conflicted > 0 )) && info+=("$conflicted conflicted")
+        (( untracked > 0 )) && info+=("$untracked untracked")
+        report "$repopath" "$(join ", " "${info[@]}")"
     fi
 done
