@@ -54,6 +54,8 @@ this repository.
 
 * ack
 * git: global gitconfig and gitignore
+* terraform: to have a central plugin cache. Set `TF_CLI_CONFIG_FILE`
+  variable to a different file if you want to modify it.
 * tmux
 
 ## aliases and functions
