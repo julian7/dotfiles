@@ -80,7 +80,9 @@ this repository.
 * reagent: re-runs `gpg-agent` in case it becomes unavailable
 * serve: simple ruby-based static webserver
 * t: tmux -u (tmux)
+* tax: terraform apply x
 * tf: terraform
+* tpx: terraform plan -out x
 * vaultauth: runs userpass authentication to vault
 * vi: set to nvim, vim or mvim (if installed)
 * vim: set to nvim (if installed)
