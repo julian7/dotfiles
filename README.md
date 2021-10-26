@@ -117,8 +117,19 @@ this repository.
 * Clone repo: `git clone https://github.com/julian7/dotfiles.git`
 * Change to `dotfiles` dir
 * Run `./INSTALL.sh`
-* Update your .gitconfig file to contain the changes you might need from
-  `~/.config/git/config`.
+* Modify your `~/.config/git/config` file to reflect your personal setup
+  (like user.name and user.email settings), as ~/.gitconfig is managed
+  by dotfiles.
+
+Example `~/.config/git/config` file:
+
+```init
+[user]
+  name = Random J. Hacker
+  email = rjh@example.com
+[includeIf "gitdir:/Volumes/Work/**"]
+  path = /Volumes/Work/.gitconfig
+```
 
 ## Making changes
 
