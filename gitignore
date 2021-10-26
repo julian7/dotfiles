@@ -10,3 +10,8 @@ vendor/rbx
 .idea/
 .vscode/
 .envrc
+/x
+.project
+.settings
+.classpath
+.factorypath
