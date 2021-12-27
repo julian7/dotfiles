@@ -37,7 +37,7 @@ this repository. Notable settings:
 * ruby: convenience aliases
 * ssh: yubikey's OpenPGP ssh agent handling
 * tmux: aliases
-* tools: aliases
+* tools: [modern unix tool alternatives](https://zaiste.net/posts/shell-commands-rust/)
 * vault: auth alias
 * wsl2: Yubikey support on Windows WSL2 environment: connects gpg-agent and
   ssh-agent with gpg4win, if wsl2-ssh-pageant.exe is available
@@ -48,7 +48,6 @@ this repository.
 ### Plugins
 
 * [fisher](https://github.com/jorgebucaran/fisher): package manager for fish
-* [spacefish](https://github.com/matchai/spacefish): fish shell prompt
 
 ## Other dotfiles
 
@@ -171,10 +170,10 @@ managing packages.
 
 * [chruby](https://github.com/postmodern/chruby): ruby selector environment
 * [direnv](https://github.com/direnv/direnv): Environment switcher for shell. Install with `go get -u github.com/direnv/direnv`.
+* [dust](https://github.com/bootandy/dust): a more intuitive du, written in rust.
 * [exa](https://github.com/ogham/exa): Modern ls replacement, written in rust. It comes with a single binary, but can be installed with `brew install exa` too, on MacOS.
 * [fzf](https://github.com/junegunn/fzf): command line fuzzy finder in shell history. Install with `brew install fzf`, then run `/usr/local/opt/fzf/install --key-bindings --completion --no-update-rc`.
 * [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation. Currently requires a MacOS-only pinentry program. Install: `brew install gnupg`
-* [GBT](https://github.com/jtyr/gbt): Go Bullet Train (for bash and zsh). A highly configurable, powerline-like shell prompt. Preferred over powerline-go.
 * gvim / macvim: powerful text file editor. `brew install macvim` / `apt-get install vim-gnome`.
 * [Iosevka](https://github.com/be5invis/Iosevka) font. Narrow, but well-readable. It has ligatures and powerline support. Install: `brew tap caskroom/fonts && brew cask install font-iosevka`
 * [Nerd forts for Iosevka](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka): an extended Iosevka font for powerline / GBT / spacefish use.
@@ -185,6 +184,7 @@ managing packages.
 * [ripgrep](https://github.com/BurntSushi/ripgrep): blazing fast `grep -r` replacement. Install: `brew install ripgrep` / `apt-get install ripgrep`.
 * [ruby-install](https://github.com/postmodern/ruby-install): ruby builder for chruby: see README
 * [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for rbenv: see README
+* [starship](https://starship.rs/): blazing-fast multi-shell command prompt. Install: `brew install starship`.
 * [tmux](https://github.com/tmux/tmux): terminal multiplexer. You will love it, especially if you use PuTTY or any non-tabbed terminal clients.
 * [rust](https://www.rust-lang.org/): Rust programming language. Install with `curl https://sh.rustup.rs -sSf | sh`.
 * [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager.
