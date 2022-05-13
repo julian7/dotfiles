@@ -203,6 +203,6 @@ if has("autocmd")
   autocmd FileType puppet set ai sw=2 sts=2 et
   autocmd FileType javascript set ai sw=2 sts=2 et
 
-  autocmd BufWritePre,TextChanged,InsertLeave *.js Neoformat
-  autocmd BufWritePre,TextChanged,InsertLeave *.json Neoformat
+  "autocmd BufWritePre,TextChanged,InsertLeave *.js Neoformat
+  "autocmd BufWritePre,TextChanged,InsertLeave *.json Neoformat
 endif
