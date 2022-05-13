@@ -6,3 +6,8 @@ alias b='bundle'
 alias be='bundle exec'
 alias r='bin/rails'
 alias serve='ruby -run -e httpd . -p 9000'
+
+if test -f /usr/local/opt/chruby-fish/share/chruby/chruby.fish
+  source /usr/local/opt/chruby-fish/share/chruby/chruby.fish
+  source /usr/local/opt/chruby-fish/share/chruby/auto.fish
+end

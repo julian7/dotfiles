@@ -34,7 +34,7 @@ this repository. Notable settings:
 * go: best practice variables
 * k8s: convenience aliases
 * node: yarn settings
-* ruby: convenience aliases
+* ruby: convenience aliases, chruby-fish (if installed).
 * ssh: yubikey's OpenPGP ssh agent handling
 * tmux: aliases
 * tools: [modern unix tool alternatives](https://zaiste.net/posts/shell-commands-rust/)
@@ -169,7 +169,8 @@ managing packages.
 
 ## Extensions in mind
 
-* [chruby](https://github.com/postmodern/chruby): ruby selector environment
+* [chruby](https://github.com/postmodern/chruby): ruby selector environment: install with `brew install chruby`.
+* [chruby-fish](https://github.com/JeanMertz/chruby-fish): wrapper around chruby for fish shell. Install with `brew install chruby-fish`.
 * [direnv](https://github.com/direnv/direnv): Environment switcher for shell. Install with `go get -u github.com/direnv/direnv`.
 * [dust](https://github.com/bootandy/dust): a more intuitive du, written in rust.
 * [exa](https://github.com/ogham/exa): Modern ls replacement, written in rust. It comes with a single binary, but can be installed with `brew install exa` too, on MacOS.
