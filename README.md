@@ -11,7 +11,7 @@ Notable settings:
 * editor: finds proper EDITOR var, creates some convenience aliases
 * git: git prompt
 * osx-proxy-icons: adds proxy icon support to OSX Terminal
-* paths: extra path
+* paths: extra path settings for rust, rbenv, Rancher Desktop
 * chruby: chruby bootstrap (if installed)
 * rbenv: rbenv bootstrap (if installed)
 * ruby: some ruby and ruby on rails aliases
