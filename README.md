@@ -146,6 +146,7 @@ Local changes can go to
 * `~/.zshenv.local`
 * `~/.zlogin.local`
 * `~/.config/fish/config.fish` (in case of using fish shell)
+* `~/.gitconfig.local`
 
 which are loaded at the end of the respective original scripts.
 

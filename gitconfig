@@ -65,6 +65,8 @@
 [pull]
 	rebase = true
 [push]
-	default = matching
+	default = upstream
 [rerere]
 	enabled = true
+[include]
+	path = "~/.gitconfig.local"
