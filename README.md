@@ -17,7 +17,7 @@ Notable settings:
 * ruby: some ruby and ruby on rails aliases
 * settings: ZSH settings
 * ssh: GnuPG agent support
-* GBT: Powerline-like prompt (if installed). Alternatively, you can use powerline-go.
+* GBT: Powerline-like prompt (if installed). Alternatives: starship, powerline-go.
 * tmux: aliases and ssh title replacer function
 
 ## FISH config
@@ -110,6 +110,8 @@ this repository.
 * kcx: kubernetes context switcher
 * kns: kubernetes namespace switcher
 * repostat: finds git repos in your path, and shows repo cleanliness
+* set-ssh-auth-sock: changing current SSH_AUTH_SOCK value. Currently `gpg` and
+  `secretive` are supported.
 
 ## Installation
 
@@ -129,6 +131,13 @@ Example `~/.config/git/config` file:
 [includeIf "gitdir:/Volumes/Work/**"]
   path = /Volumes/Work/.gitconfig
 ```
+
+* Set default SSH_AUTH_SOCK setter: if the system-provided `SSH_AUTH_SOCK` is
+  not enough, you can choose from extra sockets (see `~/.ssh/sockets.conf`).
+  The file format is `<NAME> <Path to socket>`. No comments allowed.
+
+  Create the file `~/.ssh/defaultsocket.conf` with a single line containing
+  the name of your chosen socket provider, like `gpg` or `secretive`.
 
 ## Making changes
 
