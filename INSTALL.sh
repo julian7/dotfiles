@@ -19,9 +19,10 @@ install_dir() {
     [[ "$name" =~ /\*$ ]] && break
     [[ "$name" =~ /[A-Z]*\.[a-z0-9]*$ ]] && continue
     local base="${name#${source}/}"
-    base=${base#DIR-}
-    local indest="${destination}/${prefix}${base}"
-    if [[ -d "${name}" && "${name}" =~ /DIR-[^/]*$ ]]; then
+    local destname=${base#DIR-}
+    local indest="${destination}/${prefix}${destname}"
+    if [[ -d "${name}" && "${base}" != "${destname}" ]]; then
+      [[ -L "${indest} "]] && rm "${indest}"
       mkdir -p "${indest}"
       install_dir "${name}" "${indest}"
     else
@@ -59,7 +60,7 @@ install_file() {
   test -e "${destination}" || ln -s "${source}" "${destination}"
 }
 
-cd `dirname $0`
+cd "${0%/*}"
 
 install_dir "$PWD" "$HOME" "."
 
