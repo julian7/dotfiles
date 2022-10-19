@@ -22,7 +22,7 @@ install_dir() {
     local destname=${base#DIR-}
     local indest="${destination}/${prefix}${destname}"
     if [[ -d "${name}" && "${base}" != "${destname}" ]]; then
-      [[ -L "${indest} "]] && rm "${indest}"
+      [[ -L "${indest}" ]] && rm "${indest}"
       mkdir -p "${indest}"
       install_dir "${name}" "${indest}"
     else
