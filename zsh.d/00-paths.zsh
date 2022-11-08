@@ -17,6 +17,7 @@ path=(
   $HOME/.cargo/bin
   $HOME/.rbenv/bin
   $HOME/.rd/bin
+  /opt/homebrew/bin
   /usr/local/bin
   /usr/local/sbin
   /usr/bin

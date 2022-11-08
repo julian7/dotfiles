@@ -1,13 +1,13 @@
-set -ga fish_user_paths /usr/local/opt/ruby/bin
-set -xp LDFLAGS "-L/usr/local/opt/ruby/lib"
-set -xp CPPFLAGS "-I/usr/local/opt/ruby/include"
+for homebrew in /usr/local/opt /opt/homebrew/opt
+    if [ -f $homebrew/ruby/bin ]
+        set -ga fish_user_paths $homebrew/ruby/bin
+        set -xp LDFLAGS "-L$homebrew/ruby/lib"
+        set -xp CPPFLAGS "-I$homebrew/ruby/include"
+        set -U XDG_DATA_DIRS "$homebrew/chruby-fish/share"
+    end
+end
 
 alias b='bundle'
 alias be='bundle exec'
 alias r='bin/rails'
 alias serve='ruby -run -e httpd . -p 9000'
-
-if test -f /usr/local/opt/chruby-fish/share/chruby/chruby.fish
-  source /usr/local/opt/chruby-fish/share/chruby/chruby.fish
-  source /usr/local/opt/chruby-fish/share/chruby/auto.fish
-end
