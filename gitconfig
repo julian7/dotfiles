@@ -66,6 +66,7 @@
 	rebase = true
 [push]
 	default = upstream
+	autoSetupRemote = true
 [rerere]
 	enabled = true
 [include]
