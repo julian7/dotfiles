@@ -11,4 +11,5 @@ set PATH \
   /bin \
   /usr/sbin \
   /sbin \
-  /opt/X11/bin
+  /opt/X11/bin \
+  /Applications/Keybase.app/Contents/SharedSupport/bin
