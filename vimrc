@@ -26,8 +26,8 @@ if has("win32")
   set backupdir=~/vimfiles/_backup    " where to put backup files.
   set directory=~/vimfiles/_temp      " where to put swap files.
 else
-  set backupdir^=~/.vim/_backup/      " where to put backup files.
-  set directory^=~/.vim/_temp/        " where to put swap files.
+  set backupdir^=~/.vim/_backup      " where to put backup files.
+  set directory^=~/.vim/_temp        " where to put swap files.
 endif
 
 color Tomorrow-Night
