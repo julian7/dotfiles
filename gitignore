@@ -10,6 +10,7 @@ vendor/rbx
 .idea/
 .vscode/
 .envrc
+.envrc.*
 /x
 .project
 .settings
