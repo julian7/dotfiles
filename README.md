@@ -139,6 +139,8 @@ Example `~/.config/git/config` file:
   Create the file `~/.ssh/defaultsocket.conf` with a single line containing
   the name of your chosen socket provider, like `gpg` or `secretive`.
 
+* Install `packer.nvim` for neovim, `vim-plug` for vim plugins.
+
 ## Making changes
 
 These changes are good for me, but you might want to have other settings (you
@@ -188,6 +190,7 @@ managing packages.
 * gvim / macvim: powerful text file editor. `brew install macvim` / `apt-get install vim-gnome`.
 * [Iosevka](https://github.com/be5invis/Iosevka) font. Narrow, but well-readable. It has ligatures and powerline support. Install: `brew tap caskroom/fonts && brew cask install font-iosevka`
 * [Nerd forts for Iosevka](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka): an extended Iosevka font for powerline / GBT / spacefish use.
+* [packer.nvim](https://github.com/wbthomason/packer.nvim): Neovim plugin manager. Run `git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim` to install.
 * [pinentry-mac](https://github.com/GPGTools/pinentry-mac): GUI-based pinentry app for MacOS. Currently this is the pinentry application for GnuPG. Install: `brew install pinentry-mac`
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment: `brew install rbenv` / see README
 * [powerline-go](https://github.com/justjanne/powerline-go): Powerline-like shell prompt. Use of GBP is more recommended. Install: `go get -u github.com/justjanne/powerline-go`
@@ -198,7 +201,7 @@ managing packages.
 * [starship](https://starship.rs/): blazing-fast multi-shell command prompt. Install: `brew install starship`.
 * [tmux](https://github.com/tmux/tmux): terminal multiplexer. You will love it, especially if you use PuTTY or any non-tabbed terminal clients.
 * [rust](https://www.rust-lang.org/): Rust programming language. Install with `curl https://sh.rustup.rs -sSf | sh`.
-* [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager.
+* [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager, used for vim installations.
   Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install, and then run `vim -c PlugInstall -c exit -c exit` to configure. Neovim users should install it by `curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` instead.
 * [wsl2-ssh-pageant](https://github.com/BlackReloaded/wsl2-ssh-pageant): tunnels gpg4win's gpg agent into wsl2. To install, put the windows executable into your `$HOME/.ssh` in your wsl2 environment.
 * [yarn](https://yarnpkg.com/): Alternative to Node Package Manager, especially for client-base javascript frameworks. Install with `sudo npm -g install yarn`.
