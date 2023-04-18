@@ -4,17 +4,15 @@ vim.keymap.set('i', '<D-s>', '<ESC>:w<CR>')
 vim.keymap.set('', '<D-o>', ':w<CR>')
 vim.keymap.set('i', '<D-o>', '<ESC>:w<CR>')
 
--- Move around splits
-vim.keymap.set('n', "<c-j>", "<c-w>j", { noremap = true })
-vim.keymap.set('n', "<c-k>", "<c-w>k", { noremap = true })
-vim.keymap.set('n', "<c-h>", "<c-w>h", { noremap = true })
-vim.keymap.set('n', "<c-l>", "<c-w>l", { noremap = true })
-vim.keymap.set('n', "<c-Down>", "<c-w>j", { noremap = true })
-vim.keymap.set('n', "<c-Up>", "<c-w>k", { noremap = true })
-vim.keymap.set('n', "<c-Left>", "<c-w>h", { noremap = true })
-vim.keymap.set('n', "<c-Right>", "<c-w>l", { noremap = true })
+-- Go files
+vim.keymap.set('', '<leader>gm', ':topleft 100 :split go.mod<cr>')
 
--- Ruby/rails files
-vim.keymap.set('', '<leader>gg', ':topleft 100 :split Gemfile<cr>')
-vim.keymap.set('', '<leader>gr', ':topleft :split config/routes.rb<cr>')
+-- Python files
+vim.keymap.set('', '<leader>pr', ':topleft 100 :split requirements.txt<cr>')
 
+-- Ruby/Rails files
+vim.keymap.set('', '<leader>rg', ':topleft 100 :split Gemfile<cr>')
+vim.keymap.set('', '<leader>rr', ':topleft :split config/routes.rb<cr>')
+
+-- Rust files
+vim.keymap.set('', '<leader>rc', ':topleft 100 :split Cargo.toml<cr>')
