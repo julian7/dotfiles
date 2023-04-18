@@ -153,7 +153,9 @@ Local changes can go to
 * `~/.zshenv.local`
 * `~/.zlogin.local`
 * `~/.config/fish/config.fish` (in case of using fish shell)
-* `~/.gitconfig.local`
+* `~/.gitconfig.local` (local git config)
+* `~/.config/nvim/lua/local/init.lua` (local neovim config)
+* `~/.config/wezterm/local.lua` (local wezterm config)
 
 which are loaded at the end of the respective original scripts.
 
@@ -198,6 +200,7 @@ managing packages.
 * [tmux](https://github.com/tmux/tmux): terminal multiplexer. You will love it, especially if you use PuTTY or any non-tabbed terminal clients.
 * [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager, used for vim installations.
   Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install, and then run `vim -c PlugInstall -c exit -c exit` to configure. Neovim users should install it by `curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` instead.
+* [wezterm](https://wezfurlong.org/wezterm/): cross-platform terminal emulator and multiplexer written in rust. Install: `brew install --cask wezterm`.
 * [wsl2-ssh-pageant](https://github.com/BlackReloaded/wsl2-ssh-pageant): tunnels gpg4win's gpg agent into wsl2. To install, put the windows executable into your `$HOME/.ssh` in your wsl2 environment.
 * [yarn](https://yarnpkg.com/): Alternative to Node Package Manager, especially for client-base javascript frameworks. Install with `sudo npm -g install yarn`.
 
