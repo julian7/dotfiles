@@ -9,15 +9,11 @@ Most parts of the config is separated into various .zsh files in ~/.zsh.d.
 Notable settings:
 
 * editor: finds proper EDITOR var, creates some convenience aliases
-* git: git prompt
 * osx-proxy-icons: adds proxy icon support to OSX Terminal
 * paths: extra path settings for rust, rbenv, Rancher Desktop
-* chruby: chruby bootstrap (if installed)
-* rbenv: rbenv bootstrap (if installed)
-* ruby: some ruby and ruby on rails aliases
+* ruby: some ruby and ruby on rails aliases, sets up chruby / rbenv
 * settings: ZSH settings
-* ssh: GnuPG agent support
-* GBT: Powerline-like prompt (if installed). Alternatives: starship, powerline-go.
+* ssh: GnuPG / Secretive agent support, Updates terminal titles on SSH
 * tmux: aliases and ssh title replacer function
 
 ## FISH config
@@ -25,7 +21,7 @@ Notable settings:
 Fish settings are in ~/.config/fish/conf.d directory, which is 100% controlled by
 this repository. Notable settings:
 
-* paths: it adds a lot of convenience paths such as $HOME/bin and $HOME/.bin
+* paths: it adds a lot of convenience paths such as $HOME/bin and $HOME/.bin, keybase, homebrew, etc.
 * chefdk: aliases
 * direnv: loads fish hooks for direnv
 * docker: convenience aliases
@@ -187,24 +183,35 @@ managing packages.
 * [exa](https://github.com/ogham/exa): Modern ls replacement, written in rust. It comes with a single binary, but can be installed with `brew install exa` too, on MacOS.
 * [fzf](https://github.com/junegunn/fzf): command line fuzzy finder in shell history. Install with `brew install fzf`, then run `/usr/local/opt/fzf/install --key-bindings --completion --no-update-rc`.
 * [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation. Currently requires a MacOS-only pinentry program. Install: `brew install gnupg`
-* gvim / macvim: powerful text file editor. `brew install macvim` / `apt-get install vim-gnome`.
-* [Iosevka](https://github.com/be5invis/Iosevka) font. Narrow, but well-readable. It has ligatures and powerline support. Install: `brew tap caskroom/fonts && brew cask install font-iosevka`
-* [Nerd forts for Iosevka](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka): an extended Iosevka font for powerline / GBT / spacefish use.
+* [Neovide](https://neovide.dev/): Simple cross-platform GUI for Neovim. Install: `brew install --cask neovide`.
 * [packer.nvim](https://github.com/wbthomason/packer.nvim): Neovim plugin manager. Run `git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim` to install.
 * [pinentry-mac](https://github.com/GPGTools/pinentry-mac): GUI-based pinentry app for MacOS. Currently this is the pinentry application for GnuPG. Install: `brew install pinentry-mac`
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment: `brew install rbenv` / see README
-* [powerline-go](https://github.com/justjanne/powerline-go): Powerline-like shell prompt. Use of GBP is more recommended. Install: `go get -u github.com/justjanne/powerline-go`
+* [powerline-go](https://github.com/justjanne/powerline-go): Powerline-like shell prompt. Use of starship is more recommended. Install: `go get -u github.com/justjanne/powerline-go`
 * [rbenv-vars](https://github.com/sstephenson/rbenv-vars): `mkdir ~/.rbenv/plugins; cd ~/.rbenv/plugins; git clone https://github.com/sstephenson/rbenv-vars.git`
 * [ripgrep](https://github.com/BurntSushi/ripgrep): blazing fast `grep -r` replacement. Install: `brew install ripgrep` / `apt-get install ripgrep`.
 * [ruby-install](https://github.com/postmodern/ruby-install): ruby builder for chruby: see README
 * [ruby-build](https://github.com/sstephenson/ruby-build): ruby builder for rbenv: see README
+* [rust](https://www.rust-lang.org/): Rust programming language. Install with `brew install rustup-init`. Non-RISC non-mac installs can use `curl https://sh.rustup.rs -sSf | sh`. Then, use `rustup-init` to install rust packages.
+* [Secretive](https://github.com/maxgoedjen/secretive): stores SSH keys in Secure Enclave (mac only). Install with `brew install secretive`.
 * [starship](https://starship.rs/): blazing-fast multi-shell command prompt. Install: `brew install starship`.
 * [tmux](https://github.com/tmux/tmux): terminal multiplexer. You will love it, especially if you use PuTTY or any non-tabbed terminal clients.
-* [rust](https://www.rust-lang.org/): Rust programming language. Install with `curl https://sh.rustup.rs -sSf | sh`.
 * [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager, used for vim installations.
   Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install, and then run `vim -c PlugInstall -c exit -c exit` to configure. Neovim users should install it by `curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` instead.
 * [wsl2-ssh-pageant](https://github.com/BlackReloaded/wsl2-ssh-pageant): tunnels gpg4win's gpg agent into wsl2. To install, put the windows executable into your `$HOME/.ssh` in your wsl2 environment.
 * [yarn](https://yarnpkg.com/): Alternative to Node Package Manager, especially for client-base javascript frameworks. Install with `sudo npm -g install yarn`.
+
+## Text font recommendations
+
+The following fonts are all available in `homebrew/cask-fonts` cask. Add this cask to the tap to install these fonts: `brew tap homebrew/cask-fonts`. Then, install individual fonts with `brew install --cask font-XXX` (where `font-XXX` is the font name).
+
+Prompt generators, vim statuslines require extra characters, [Nerdfonts](https://nerdfonts.com/) conversion is recommended.
+
+* Comic Mono: only for the lulz. Cask font name: `font-comic-mono`. Unfortunately, its Nerdfont version doesn't have a convenient install, it has to be installed manually from [xtevenx/ComicMonoNF](https://github.com/xtevenx/ComicMonoNF) repo.
+* [FiraCode](https://github.com/tonsky/FiraCode): the first code font with ligatures. Font names: `font-fira-code`, `font-fira-code-nerd-font`.
+* [Iosevka](https://github.com/be5invis/Iosevka) font. Narrow, but well-readable. It has ligatures and powerline support. Font names: `font-iosevka`, `font-iosevka-nerd-font`.
+* [JetBrains Mono](https://www.jetbrains.com/lp/mono/): monospace font from JetBrains. Font names: `font-jetbrains-mono`, `font-jetbrains-mono-nerd-font`. Note: this is the default font in all GUI settings.
+* Source Code Pro / Sauce Code Pro Nerd font: Font names: `font-source-code-pro`, `font-sauce-code-pro-nerd-font`.
 
 ## Copyright
 
