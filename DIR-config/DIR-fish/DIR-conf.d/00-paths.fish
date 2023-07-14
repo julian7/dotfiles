@@ -3,6 +3,7 @@ set PATH \
   $HOME/.bin \
   $HOME/.cargo/bin \
   $HOME/.rbenv/bin \
+  $HOME/.yarn/bin \
   $HOME/.rd/bin \
   /opt/homebrew/bin \
   /usr/local/bin \
