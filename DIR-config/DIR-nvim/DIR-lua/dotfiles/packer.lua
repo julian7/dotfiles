@@ -5,6 +5,14 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'RRethy/nvim-base16'
     use 'tpope/vim-fugitive'
+    use({
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+    })
+
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',

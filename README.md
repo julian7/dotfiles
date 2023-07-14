@@ -185,6 +185,7 @@ managing packages.
 * [exa](https://github.com/ogham/exa): Modern ls replacement, written in rust. It comes with a single binary, but can be installed with `brew install exa` too, on MacOS.
 * [fzf](https://github.com/junegunn/fzf): command line fuzzy finder in shell history. Install with `brew install fzf`, then run `/usr/local/opt/fzf/install --key-bindings --completion --no-update-rc`.
 * [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation. Currently requires a MacOS-only pinentry program. Install: `brew install gnupg`
+* [lazygit](https://github.com/jesseduffield/lazygit): CLI UI for git. Its neovim plugin allows lazygit integration, which makes fugitive basically obsolete.
 * [Neovide](https://neovide.dev/): Simple cross-platform GUI for Neovim. Install: `brew install --cask neovide`.
 * [packer.nvim](https://github.com/wbthomason/packer.nvim): Neovim plugin manager. Run `git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim` to install.
 * [pinentry-mac](https://github.com/GPGTools/pinentry-mac): GUI-based pinentry app for MacOS. Currently this is the pinentry application for GnuPG. Install: `brew install pinentry-mac`
