@@ -5,7 +5,7 @@ local config = {}
 
 config.color_scheme = 'Tomorrow Night'
 config.font = wezterm.font('JetBrains Mono')
-config.font_size = 13
+config.font_size = 15
 config.line_height = 1.0
 config.initial_cols = 130
 config.initial_rows = 35
