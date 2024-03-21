@@ -17,3 +17,4 @@ vendor/rbx
 .settings
 .classpath
 .factorypath
+node_modules
