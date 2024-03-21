@@ -9,6 +9,7 @@ vendor/rbx
 *.sublime-workspace
 .idea/
 .vscode/
+.zed/
 .envrc
 .envrc.*
 /x

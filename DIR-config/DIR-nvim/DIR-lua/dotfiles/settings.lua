@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 vim.cmd.colorscheme('base16-tomorrow-night')
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.termguicolors = true
 
 vim.opt.guifont = { "JetBrains Mono", ":h13" }
 vim.opt.clipboard = "unnamed"
