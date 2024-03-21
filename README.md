@@ -107,8 +107,7 @@ this repository.
 * kcx: kubernetes context switcher
 * kns: kubernetes namespace switcher
 * repostat: finds git repos in your path, and shows repo cleanliness
-* set-ssh-auth-sock: changing current SSH_AUTH_SOCK value. Currently `gpg` and
-  `secretive` are supported.
+* set-ssh-auth-sock: changing current SSH_AUTH_SOCK value. Currently `1pw` (1Password), `gpg` and `secretive` are supported.
 
 ## Installation
 
@@ -134,7 +133,7 @@ Example `~/.config/git/config` file:
   The file format is `<NAME> <Path to socket>`. No comments allowed.
 
   Create the file `~/.ssh/defaultsocket.conf` with a single line containing
-  the name of your chosen socket provider, like `gpg` or `secretive`.
+  the name of your chosen socket provider, like `1pw`, `gpg` or `secretive`.
 
 * Install `packer.nvim` for neovim, `vim-plug` for vim plugins.
 
