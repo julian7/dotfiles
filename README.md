@@ -30,6 +30,7 @@ this repository. Notable settings:
 * go: best practice variables
 * k8s: convenience aliases
 * node: yarn settings
+* python: python settings, pyenv (if installed).
 * ruby: convenience aliases, chruby-fish (if installed).
 * ssh: yubikey's OpenPGP ssh agent handling
 * tmux: aliases
