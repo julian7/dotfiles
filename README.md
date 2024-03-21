@@ -50,7 +50,7 @@ this repository.
 
 * ack
 * git: global gitconfig and gitignore
-* terraform: to have a central plugin cache. Set `TF_CLI_CONFIG_FILE`
+* terraform/tofu: to have a central plugin cache. Set `TF_CLI_CONFIG_FILE`
   variable to a different file if you want to modify it.
 * tmux
 
@@ -76,9 +76,9 @@ this repository.
 * reagent: re-runs `gpg-agent` in case it becomes unavailable
 * serve: simple ruby-based static webserver
 * t: tmux -u (tmux)
-* tax: terraform apply x
-* tf: terraform
-* tpx: terraform plan -out x
+* tax: tofu apply x
+* tf: tofu
+* tpx: tofu plan -out x
 * vaultauth: runs userpass authentication to vault
 * vi: set to nvim, vim or mvim (if installed)
 * vim: set to nvim (if installed)
