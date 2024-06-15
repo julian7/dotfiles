@@ -1,4 +1,5 @@
 require("dotfiles.plugins.lazy")
+require("dotfiles.neovide")
 require("dotfiles.settings")
 require("dotfiles.remap")
 require("dotfiles.autocommands")
