@@ -18,3 +18,5 @@ vendor/rbx
 .classpath
 .factorypath
 node_modules
+__pycache__
+*-go-tmp-umask
