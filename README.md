@@ -135,7 +135,7 @@ Example `~/.config/git/config` file:
   Create the file `~/.ssh/defaultsocket.conf` with a single line containing
   the name of your chosen socket provider, like `1pw`, `gpg` or `secretive`.
 
-* Install `packer.nvim` for neovim, `vim-plug` for vim plugins.
+* Install `vim-plug` for vim plugins. Neovim config uses `git` to install `lazy.nvim` on first run.
 
 ## Making changes
 
@@ -187,7 +187,7 @@ managing packages.
 * [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation. Currently requires a MacOS-only pinentry program. Install: `brew install gnupg`
 * [lazygit](https://github.com/jesseduffield/lazygit): CLI UI for git. Its neovim plugin allows lazygit integration, which makes fugitive basically obsolete.
 * [Neovide](https://neovide.dev/): Simple cross-platform GUI for Neovim. Install: `brew install --cask neovide`.
-* [packer.nvim](https://github.com/wbthomason/packer.nvim): Neovim plugin manager. Run `git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim` to install.
+* [lazy.nvim](https://github.com/folke/lazy.nvim): Neovim plugin manager. Installs automatically using `git`.
 * [pinentry-mac](https://github.com/GPGTools/pinentry-mac): GUI-based pinentry app for MacOS. Currently this is the pinentry application for GnuPG. Install: `brew install pinentry-mac`
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment: `brew install rbenv` / see README
 * [powerline-go](https://github.com/justjanne/powerline-go): Powerline-like shell prompt. Use of starship is more recommended. Install: `go get -u github.com/justjanne/powerline-go`
