@@ -19,3 +19,6 @@ vim.keymap.set('', '<leader>rc', ':topleft 100 :split Cargo.toml<cr>')
 
 -- Clear highlight
 vim.keymap.set('n', '<CR>', ':nohlsearch<cr>')
+
+-- Lazygit
+vim.keymap.set('n', '<leader>lg', ':LazyGit<cr>', { silent = true })
