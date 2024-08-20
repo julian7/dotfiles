@@ -240,20 +240,35 @@ require('lazy').setup({
     'tpope/vim-sleuth',
 
     -- Fuzzy Finder (files, lsp, etc)
+    -- {
+    --     'nvim-telescope/telescope.nvim',
+    --     branch = '0.1.x',
+    --     dependencies = { 'nvim-lua/plenary.nvim' }
+    -- },
+    -- 'nvim-telescope/telescope-symbols.nvim',
+    -- -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
+    -- { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make', cond = vim.fn.executable 'make' == 1 },
+    -- {
+    --     "folke/twilight.nvim",
+    --     opts = {
+    --         -- your configuration comes here
+    --         -- or leave it empty to use the default settings
+    --         -- refer to the configuration section below
+    --     }
+    -- },
     {
-        'nvim-telescope/telescope.nvim',
-        branch = '0.1.x',
-        dependencies = { 'nvim-lua/plenary.nvim' }
-    },
-    'nvim-telescope/telescope-symbols.nvim',
-    -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
-    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make', cond = vim.fn.executable 'make' == 1 },
-    {
-        "folke/twilight.nvim",
-        opts = {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-        }
+        'ibhagwan/fzf-lua',
+        -- optional for icon support
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function()
+            -- calling 'setup' is optional for customization
+            require('fzf-lua').setup({
+                defaults = {
+                    git_icons = true,
+                    file_icons = true,
+                    color_icons = true,
+                }
+            })
+        end,
     },
 })
