@@ -4,7 +4,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.termguicolors = true
 
-vim.opt.guifont = { "JetBrains Mono", ":h13" }
+vim.opt.guifont = { "JetBrains Mono", ":h15" }
 vim.opt.clipboard = "unnamed"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
