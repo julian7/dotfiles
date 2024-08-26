@@ -4,7 +4,7 @@ cd "${0%/*}"
 
 # install homebrew
 
-if which bundle 2>/dev/null; then
+if ! which -s brew; then
     curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 fi
 
