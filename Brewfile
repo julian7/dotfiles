@@ -4,6 +4,7 @@ tap "azure/kubelogin"
 tap "derailed/popeye"
 tap "fluxcd/tap"
 tap "oven-sh/bun"
+tap "qmk/qmk"
 tap "theseal/ssh-askpass"
 
 brew "act"
