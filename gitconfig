@@ -47,6 +47,7 @@
 	defaultBranch = main
 [merge]
 	tool = p4mergetool
+	autoStash = true
 [mergetool]
 	keepBackup = false
 [mergetool "diffmerge"]
@@ -78,3 +79,5 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[rebase]
+	autoStash = true
