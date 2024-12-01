@@ -81,3 +81,7 @@
 	process = git-lfs filter-process
 [rebase]
 	autoStash = true
+[fetch]
+	prune = true
+[advice]
+	skippedCherryPicks = false
