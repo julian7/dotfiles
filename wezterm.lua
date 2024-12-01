@@ -4,11 +4,13 @@ local act = wezterm.action
 
 local config = {}
 
-config.color_scheme = 'Tomorrow Night'
+config.color_scheme = 'Tomorrow Night (Gogh)'
+-- config.color_scheme = 'Tomorrow (Gogh)'
 config.colors = {
     scrollbar_thumb = '#555',
 }
 config.font = wezterm.font('JetBrains Mono')
+config.font = wezterm.font('Iosevka Nerd Font Mono')
 config.font_size = 15
 config.line_height = 1.0
 --config.initial_cols = 120

@@ -19,4 +19,6 @@ vendor/rbx
 .factorypath
 node_modules
 __pycache__
+.ropeproject
 *-go-tmp-umask
+.$*

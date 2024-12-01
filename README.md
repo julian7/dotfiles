@@ -189,6 +189,7 @@ An independent script, `MAC.sh` is provided to do the first steps for installing
 * [eza](https://github.com/eza-community/eza): Modern ls replacement, written in rust (included).
 * [fzf](https://github.com/junegunn/fzf): command line fuzzy finder in shell history (included).
 * [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation. Currently requires a MacOS-only pinentry program (included)
+* [kitty](https://sw.kovidgoyal.net/kitty/) terminal: fast, feature-rich, GPU-based terminal emulator for Linux, Mac, and BSDs
 * [lazygit](https://github.com/jesseduffield/lazygit): CLI UI for git. Its neovim plugin allows lazygit integration, which makes fugitive basically obsolete (included).
 * [Neovim](https://neovim.io/): Vim-based text editor, successor of Vim (included).
 * [Neovide](https://neovide.dev/): Simple cross-platform GUI for Neovim (included).
