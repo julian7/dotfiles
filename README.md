@@ -207,6 +207,7 @@ An independent script, `MAC.sh` is provided to do the first steps for installing
   Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install, and then run `vim -c PlugInstall -c exit -c exit` to configure.
 * [wezterm](https://wezfurlong.org/wezterm/): cross-platform terminal emulator and multiplexer written in rust (included).
 * [wsl2-ssh-pageant](https://github.com/BlackReloaded/wsl2-ssh-pageant): tunnels gpg4win's gpg agent into wsl2. To install, put the windows executable into your `$HOME/.ssh` in your wsl2 environment.
+* [zellij](https://zellij.dev/): terminal multiplexer. I love this one better than tmux or screen.
 
 ## Text font recommendations
 
