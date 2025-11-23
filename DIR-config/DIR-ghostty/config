@@ -3,7 +3,6 @@ font-family = Iosevka Nerd Font Mono
 font-size = 18
 keybind = super+alt+left=previous_tab
 keybind = super+alt+right=next_tab
-# theme = Tomorrow Night
-theme = Monokai Pro
+theme = Tomorrow Night
 palette = 0=#000000
 # palette = 8=#222222
