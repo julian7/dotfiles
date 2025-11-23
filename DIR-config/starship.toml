@@ -1,9 +1,9 @@
 format = """
-$username\
-$hostname\
-$shlvl\
+[\u2591\u2592\u2593](lead)\
+[\ue0b4](bg:directory fg:lead)\
 $singularity\
 $directory\
+[\ue0b4](fg:directory) \
 $kubernetes\
 $vcsh\
 $git_branch\
@@ -65,6 +65,18 @@ $time\
 $status\
 $shell\
 $character"""
+
+palette = 'local'
+[palettes.local]
+lead = "#a3aed2"
+directory = "#4466ee"
+directoryfg = "#e3e5e5"
+
+[directory]
+style = "fg:directoryfg bg:directory"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "\u2026 /"
 
 [hostname]
 ssh_only = false
