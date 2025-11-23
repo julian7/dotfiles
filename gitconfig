@@ -35,7 +35,7 @@
 	cmd = /usr/bin/opendiff $LOCAL $REMOTE
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [gc]
 	writeCommitGraph = true
 [gui]
