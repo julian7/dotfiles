@@ -67,7 +67,7 @@ this repository.
 * grep: grep -a --color=always (general)
 * gvim: set to mvim (if installed)
 * joe: set to 'vim' on systems where joe is not installed
-* k: kubectl
+* k: kctl (see scripts)
 * killagent: more drastic `gpg-agent` restarter, when `reagent` is not enough
 * kubesh: runs a docker image on kubernetes interactively
 * ls: uses [exa](https://github.com/ogham/exa) if available
@@ -104,6 +104,7 @@ this repository.
 ## scripts
 
 * colorcolumn: just like 'column', but ANSI-colors-aware
+* kctl: as `kubectl`, but it sets `--context` based on `KUBECTL_CONTEXT` environment variable
 * kcx: kubernetes context switcher
 * kns: kubernetes namespace switcher
 * repostat: finds git repos in your path, and shows repo cleanliness

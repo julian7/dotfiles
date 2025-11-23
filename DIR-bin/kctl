@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[[ -n "$KUBECTL_CONTEXT" ]] && exec kubectl --context "$KUBECTL_CONTEXT" "$@"
+exec kubectl "$@"
