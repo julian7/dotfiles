@@ -2,7 +2,7 @@ command -qs joe || alias joe=vim
 
 begin
     set -l editor
-    for editor in "codium -w" "code -w" "subl -w" "mate -w" "neovide" "nvim" "mvim -f" vim joe vi
+    for editor in "zed -w" "codium -w" "code -w" "subl -w" "mate -w" "neovide" "nvim" "mvim -f" vim joe vi
         if command -qs (string split " " $editor)[1]
             set -x EDITOR "$editor"
             break
