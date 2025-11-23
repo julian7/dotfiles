@@ -195,6 +195,7 @@ An independent script, `MAC.sh` is provided to do the first steps for installing
 * [lazygit](https://github.com/jesseduffield/lazygit): CLI UI for git. Its neovim plugin allows lazygit integration, which makes fugitive basically obsolete (included).
 * [Neovim](https://neovim.io/): Vim-based text editor, successor of Vim (included).
 * [Neovide](https://neovide.dev/): Simple cross-platform GUI for Neovim (included).
+* [nvm](https://github.com/nvm-sh/nvm): Node Version Manager.
 * [lazy.nvim](https://github.com/folke/lazy.nvim): Neovim plugin manager. Installs automatically using `git`.
 * [pinentry-mac](https://github.com/GPGTools/pinentry-mac): GUI-based pinentry app for MacOS. Currently this is the pinentry application for GnuPG (included).
 * [rbenv](https://github.com/sstephenson/rbenv): ruby selector environment: `brew install rbenv` / see README
