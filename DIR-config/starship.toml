@@ -1,4 +1,5 @@
 format = """
+$hostname\
 [\u2591\u2592\u2593](lead)\
 [\ue0b4](bg:directory fg:lead)\
 $singularity\
@@ -79,8 +80,9 @@ truncation_length = 3
 truncation_symbol = "\u2026 /"
 
 [hostname]
-ssh_only = false
+ssh_only = true
 disabled = false
+format = "[$ssh_symbol$hostname]($style) "
 [username]
 show_always = true
 disabled = false
