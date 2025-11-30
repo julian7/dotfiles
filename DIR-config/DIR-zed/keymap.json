@@ -1,0 +1,37 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-alt-down": "editor::DuplicateLineDown",
+      "shift-alt-up": [
+        "workspace::SendKeystrokes",
+        "shift-alt-down up"
+      ],
+      "alt-down": "editor::MoveLineDown",
+      "alt-up": "editor::MoveLineUp"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-`": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-w": null
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-d": [
+        "editor::SelectNext",
+        {
+          "replace_newest": false
+        }
+      ]
+    }
+  }
+]

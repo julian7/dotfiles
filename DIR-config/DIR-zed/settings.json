@@ -1,0 +1,119 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "formatter": "language_server",
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "agent": {
+    "profiles": {
+      "write": {
+        "default_model": {
+          "provider": "copilot_chat",
+          "model": "gpt-4.1"
+        },
+        "name": "Write",
+        "tools": {
+          "copy_path": true,
+          "create_directory": true,
+          "delete_path": true,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": false,
+          "move_path": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "terminal": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {}
+      }
+    },
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
+    },
+    "model_parameters": []
+  },
+  "theme": "Base16 Tomorrow Night",
+  "buffer_font_family": "Iosevka Nerd Font Mono",
+  "buffer_font_size": 17,
+  "buffer_line_height": "standard",
+  "confirm_quit": true,
+  "soft_wrap": "editor_width",
+  "file_types": {},
+  "file_scan_inclusions": [
+    ".env*",
+    "docker-compose.*.yml",
+    "*.local.*"
+  ],
+  "format_on_save": "on",
+  "gutter": {
+    "line_numbers": true
+  },
+  "languages": {
+    "Plain Text": {
+      "preferred_line_length": 1024
+    },
+    "HTML": {
+      "format_on_save": "off"
+    },
+    "Python": {
+      // "language_servers": [
+      // "basedpyright",
+      //   "pyright",
+      //   "pylsp",
+      // "ruff"
+      // ],
+      "format_on_save": "on"
+    },
+    "Ruby": {
+      "tab_size": 2
+    },
+    "Templ": {
+      "hard_tabs": true
+    },
+    "YAML": {
+      "format_on_save": "off"
+    }
+  },
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "buildFlags": [
+          "-tags=behavioral"
+        ]
+      }
+    }
+  },
+  "scrollbar": {
+    "axes": {
+      "horizontal": false,
+      "vertical": true
+    }
+  },
+  "terminal": {
+    "copy_on_select": true,
+    "font_family": "Iosevka Nerd Font Mono",
+    "font_size": 16,
+    "line_height": "standard",
+    "detect_venv": "off"
+  },
+  "telemetry": {
+    "metrics": false
+  },
+  "vertical_scroll_margin": 0
+}
