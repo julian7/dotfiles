@@ -121,6 +121,7 @@ brew "ykman"
 brew "yq"
 brew "zellij"
 
+cask "1password"
 cask "1password-cli"
 cask "brave-browser"
 cask "drawio"
