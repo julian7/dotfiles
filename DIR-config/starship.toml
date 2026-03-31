@@ -14,6 +14,7 @@ $git_metrics\
 $git_status\
 $hg_branch\
 $docker_context\
+$direnv\
 $package\
 $cmake\
 $cobol\
@@ -68,6 +69,13 @@ $shell\
 $character"""
 
 palette = 'local'
+
+profiles.transient = """
+$singularity\
+$directory\
+[\ue0b4](fg:directory) \
+$character"""
+
 [palettes.local]
 lead = "#a3aed2"
 directory = "#4466ee"
@@ -76,8 +84,16 @@ directoryfg = "#e3e5e5"
 [directory]
 style = "fg:directoryfg bg:directory"
 format = "[ $path ]($style)"
-truncation_length = 3
 truncation_symbol = "\u2026 /"
+fish_style_pwd_dir_length = 2
+
+[direnv]
+disabled = false
+format = "[$loaded$allowed]($style) "
+allowed_msg = ""
+not_allowed_msg = "\U0001fad9 " # empty jar
+loaded_msg = "\U0001f9f0 " # toolbox
+unloaded_msg = ""
 
 [hostname]
 ssh_only = true
@@ -89,5 +105,5 @@ disabled = false
 format = "[$user]($style)@"
 [kubernetes]
 disabled=false
-symbol = "\u2638\ufe0f  "
+symbol = "\u2638\ufe0f  " # Wheel of Dharma
 format = '[$symbol$context( \($namespace\))]($style) '

@@ -4,4 +4,10 @@ else if command -qs exa
   alias ls=exa
 end
 
-command -qs starship && starship init fish | source
+if command -qs starship
+  function starship_transient_prompt_func
+    starship prompt --profile transient
+  end
+  starship init fish | source
+  enable_transience
+end
