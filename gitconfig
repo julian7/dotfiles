@@ -16,6 +16,7 @@
 	largest = "!~/.githelpers largest"
 	man = help
 	s = switch
+	psuh = push
 	thaw = "!~/.githelpers thaw"
 	unadd = reset HEAD
 	upstream = "!f() { br=$(git rev-parse --abbrev-ref HEAD); merge=$(git config branch.${br}.merge); echo $(git config branch.${br}.remote)/${merge##refs/heads/}; }; f"
