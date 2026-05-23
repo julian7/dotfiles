@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+fetch=0
 silent=0
 dir=.
 
@@ -23,7 +24,7 @@ join() {
     printf "%s" "$first" "${@/#/$separator}"
 }
 
-while getopts "hs" opt; do
+while getopts "hfs" opt; do
     case ${opt} in
     h)
         echo "Usage:"
@@ -31,8 +32,12 @@ while getopts "hs" opt; do
         echo "Options:"
         echo "    -h           This help"
         echo "    -s           Silent mode: no reports on clean repositories"
+        echo "    -f           Fetch: update repositories from remote"
         echo "    directory    Path where tests should start (default: .)"
         exit 0
+        ;;
+    f)
+        fetch=1
         ;;
     s)
         silent=1
@@ -50,11 +55,16 @@ while read gitdir; do
     repopath=${gitdir%/.git}
     declare -i untracked=0 conflicted=0 staged=0 notstaged=0
     declare tracking=""
+    ((fetch==1)) && git -C "$repopath" fetch >/dev/null 2>&1
+
     while IFS='\n' read -n2 status; do
         read data
         if [[ "$status" == "##" ]]; then
             if [[ "$data" =~ \[(.+)\ (.+)\] ]]; then
                 tracking="${BASH_REMATCH[1]} by ${BASH_REMATCH[2]}"
+            fi
+            if [[ "$data" =~ \[(.+)\] ]]; then
+                tracking="${BASH_REMATCH[1]}"
             fi
             continue
         fi
