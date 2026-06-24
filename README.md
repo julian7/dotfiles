@@ -136,8 +136,6 @@ Example `~/.config/git/config` file:
   Create the file `~/.ssh/defaultsocket.conf` with a single line containing
   the name of your chosen socket provider, like `1pw`, `gpg` or `secretive`.
 
-* Install `vim-plug` for vim plugins. Neovim config uses `git` to install `lazy.nvim` on first run.
-
 ## Making changes
 
 These changes are good for me, but you might want to have other settings (you
@@ -190,7 +188,6 @@ An independent script, `MAC.sh` is provided to do the first steps for installing
 * [GNU Privacy Guard](https://gnupg.org/): OpenPGP implementation. Currently requires a MacOS-only pinentry program (included)
 * [ghostty](https://ghostty.org/) terminal: fast, standards-compliant terminal emulator for Linux and Mac
 * [kitty](https://sw.kovidgoyal.net/kitty/) terminal: fast, feature-rich, GPU-based terminal emulator for Linux, Mac, and BSDs
-* [lazygit](https://github.com/jesseduffield/lazygit): CLI UI for git. Its neovim plugin allows lazygit integration, which makes fugitive basically obsolete (included).
 * [mise](https://mise.en.dev/): development environment and task manager.
 * [Neovim](https://neovim.io/): Vim-based text editor, successor of Vim (included).
 * [Neovide](https://neovide.dev/): Simple cross-platform GUI for Neovim (included).
@@ -199,8 +196,6 @@ An independent script, `MAC.sh` is provided to do the first steps for installing
 * [rust](https://www.rust-lang.org/): Environment setup for the Rust programming language. Run `rustup-init` to install rust packages. Subsequent updates can be done running `rustup update` (included).
 * [Secretive](https://github.com/maxgoedjen/secretive): stores SSH keys in Secure Enclave (mac only; included).
 * [starship](https://starship.rs/): blazing-fast multi-shell command prompt (included).
-* [vim-plug](https://github.com/junegunn/vim-plug): Minimalist Vim Plugin Manager, used for vim installations (not for Neovim!).
-  Run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install, and then run `vim -c PlugInstall -c exit -c exit` to configure.
 * [wezterm](https://wezfurlong.org/wezterm/): cross-platform terminal emulator and multiplexer written in rust (included).
 * [wsl2-ssh-pageant](https://github.com/BlackReloaded/wsl2-ssh-pageant): tunnels gpg4win's gpg agent into wsl2. To install, put the windows executable into your `$HOME/.ssh` in your wsl2 environment.
 * [zmx](https://zmx.sh/): Session persistence for terminal processes. Just like screen/tmux/zellij, sans terminal emulation.

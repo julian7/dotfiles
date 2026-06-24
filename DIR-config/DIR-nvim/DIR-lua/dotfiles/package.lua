@@ -1,0 +1,13 @@
+vim.pack.add({
+    "https://github.com/nvim-mini/mini.nvim",
+    "https://github.com/nat-418/boole.nvim",
+    "https://github.com/neovim/nvim-lspconfig",
+    "https://github.com/kdheepak/lazygit.nvim",
+    "https://github.com/nvim-lualine/lualine.nvim",
+    "https://github.com/nvim-tree/nvim-tree.lua",
+    "https://github.com/folke/trouble.nvim",
+    "https://github.com/ray-x/go.nvim",
+    "https://github.com/lukas-reineke/indent-blankline.nvim",
+    "https://github.com/numToStr/Comment.nvim",
+    "https://github.com/tpope/vim-sleuth",
+})

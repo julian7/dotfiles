@@ -1,3 +1,3 @@
-require("dev")
+require("dotfiles")
 
 pcall(require, "local")
