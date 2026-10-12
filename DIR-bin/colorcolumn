@@ -10,7 +10,7 @@
     for (i = 1; i <= NF; i++) {
         cell[NR,i] = $i
         gsub(/\033\[([[:digit:]]+(;[[:digit:]]+)*)?[mK]/, "", $i)
-        len[NR,i] = l = length($i)
+        len[NR,i] = l = utf8len($i)
         if (l > max[i]) max[i] = l
     }
 }
@@ -20,4 +20,8 @@ END {
             printf "%s%*s%s", cell[row,col], max[col]-len[row,col], "", OFS
         print cell[row,nf[row]]
     }
+}
+function utf8len(s, copy) {
+    copy = s
+    return length(s) - gsub(/[\200-\277]/, "", copy)
 }
