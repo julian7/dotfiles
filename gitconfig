@@ -12,7 +12,7 @@
 	fm = merge --no-ff
 	ff = merge --ff
 	freeze = "!~/.githelpers freeze"
-	h = "!f() { git log --graph --abbrev-commit --color=always --pretty=format:\"%C(yellow)%h%Creset}%Cgreen(%ai)%Creset}%C(bold blue)%an <%ae>%Creset}%C(red)%d%Creset}%s\" \"$@\" | sed -Ee \"s/ ([0-9]{2}:[0-9]{2}):[0-9]{2} \\\\+[0-9]{4}/ \\\\1/\" | colorcolumn FS=\"}\" | less -FXRS; }; f"
+	h = "!f() { git log --graph --abbrev-commit --color=always --pretty=format:\"%C(yellow)%h%Creset}%Cgreen(%ai)%Creset}%C(bold blue)%an <%ae>%Creset}%C(red)%d%Creset}%s\" \"$@\" | sed -Ee \"s/ ([0-9]{2}:[0-9]{2}):[0-9]{2} \\\\+[0-9]{4}/ \\\\1/\" | column -t -s \"}\" | less -FXRS; }; f"
 	largest = "!~/.githelpers largest"
 	man = help
 	s = switch
